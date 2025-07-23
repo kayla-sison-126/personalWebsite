@@ -4,6 +4,7 @@ import '../styles/Footer.css'
 export default function Footer() {
   return (
     <div className="footer">
+        <img src="/src/assets/footer-bg.png" alt="Footer Background" className="footer-img" />
         <div className="footer-content">
             <p>Created by Kayla Sison</p>
             <div className="link-section">
