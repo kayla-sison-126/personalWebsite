@@ -1,12 +1,32 @@
-# React + Vite
+# My Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website will include the following pages:
+- Home
+- About
+- Experience
+- Projects
+- Blog
+- (Error Page)
 
-Currently, two official plugins are available:
+It will act as my portfolio and my blog! I plan on adding a lot of personality as well as everything on my resume plus extra information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Home
+- short greeting and intro
+- call-to-action that prompts viewers to explore the page
+- contact section (send me an email)
 
-## Expanding the ESLint configuration
+## About
+- longer introduction/bio
+- list of technical skills & tools
+- list of achievements
+- photo gallery :)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Experience
+- timeline of my professional journey, in more detail
+- link to my resume at top of page as well
+
+## Projects
+- project showcase page
+
+## Blog
+- my personal blog, where i write stuff about my cs projects and miscellaneous tech-related things
