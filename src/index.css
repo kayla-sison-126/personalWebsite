@@ -10,3 +10,20 @@
 
   background-color:rgb(215, 248, 248);
 }
+
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./assets/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 700; /* full weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
