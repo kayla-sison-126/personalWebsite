@@ -51,7 +51,7 @@ a {
 }
 
 
-/* RIGHT: name/logo */
+/* LEFT: name/logo */
 .logo a {
   color: white;
   font-size: medium;
@@ -83,7 +83,7 @@ nav {
   max-width: 90%;
   height: 2px;
   backdrop-filter: blur(6px);
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
 }
 
 
@@ -94,8 +94,16 @@ nav a {
     padding-top: 3px;
 }
 
+.nav-center-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-/* LEFT: icons */
+
+/* RIGHT: icons */
 .icons ul {
   display: flex;
   gap: 16px;

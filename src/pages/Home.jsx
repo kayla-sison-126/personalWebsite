@@ -1,5 +1,5 @@
-import { useEffect, React, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { Link  } from "react-router-dom";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
@@ -30,6 +30,7 @@ export default function Home() {
         }
       );
   };
+
 
   return (
     <>
