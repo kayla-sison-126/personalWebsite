@@ -1,6 +1,6 @@
 # My Personal Website
 ![Status](https://img.shields.io/badge/status-in--progress-yellow)
-`React` `JavaScript` `HTML` `CSS` `EmailJS` `React Spring`
+`React` `JavaScript` `HTML` `CSS` `EmailJS` `React Spring` `Figma`
 
 
 This project is my **portfolio and blog** site that showcases who I am as a developer, creator, and student. It's filled with my personality and style! This site combines a charming interface with clear, navigable sections to provide insight into my experience, projects, and blog.
