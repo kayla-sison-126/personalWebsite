@@ -63,16 +63,9 @@ This project is my **portfolio and blog** site that showcases who I am as a deve
 
 ## License
 
-    Copyright 2025 Kayla Sison
+    Copyright 2025 Kayla Sison.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+    This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
 
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+    To view a copy of this license, visit:
+    https://creativecommons.org/licenses/by-nc/4.0/
