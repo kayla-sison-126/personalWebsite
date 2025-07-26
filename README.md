@@ -16,7 +16,7 @@ This project is my **portfolio and blog** site that showcases who I am as a deve
 - 👩‍💻 **About**: Extended bio, technical skills, achievements, and photo gallery
 - 💼 **Experience**: Professional timeline + downloadable resume
 - 🛠️ **Projects**: Visual project showcase with descriptions
-- ✍️ **Blog**: Writing space for sharing thoughts on CS topics and tech trends
+- ✍️ **Blog**: Writing space for sharing my reflections on professional experiences and projects
 - ❌ **Custom 404 Page**: Friendly error page for broken links
 
 
@@ -49,12 +49,15 @@ This project is my **portfolio and blog** site that showcases who I am as a deve
 #### Home scroll-through
 <img src="src/assets/README/Home.gif" width="400" height="auto" style="vertical-align: top;"/>
 
-#### Figma Designs
-<div style="gap: 10px;">
-  <img src="src/assets/README/Home.png" width="200" height="auto" style="vertical-align: top;"/>
-  <img src="src/assets/README/About.png" width="200" height="auto" style="vertical-align: top;"/>
-  <img src="src/assets/README/Experience.png" width="200" height="auto" style="vertical-align: top;"/>
-</div>
+#### Figma Designs (click for a closer look!)
+<table>
+<tr>
+    <td><img src="src/assets/README/Home.png" width="200"></td>
+    <td><img src="src/assets/README/About.png" width="200"></td>
+    <td><img src="src/assets/README/Experience.png" width="200"></td>
+</tr>
+</table>
+
 
 
 
