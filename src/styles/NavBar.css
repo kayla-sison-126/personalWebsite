@@ -17,6 +17,7 @@ header {
     max-width: 1200px;
     padding: 1rem 2rem;
     padding-left: 4rem;
+    padding-right: 4rem;
 
     display: flex;
     flex-direction: row;
@@ -100,6 +101,7 @@ nav a {
   transform: translateX(-50%);
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 
@@ -109,6 +111,7 @@ nav a {
   gap: 16px;
   margin: 0;
   padding: 0;
+  padding-top: 4px;
   list-style: none;
   align-items: center;
 }
@@ -133,23 +136,24 @@ nav a {
   opacity: 0.8;
 }
 
+.hamburgerIcon {
+  display: none;
+}
+
 
 
 /* vertical layout */
 @media (max-width: 900px) {
-  .navbarInner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    left: 0;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+
+  .nav-center-wrapper {
+  display: none;
   }
 
-  .icons ul {
-    justify-content: center;
-    gap: 30px;
+  .navIcon {
+    visibility: hidden;
+  }
+  
+  .hamburgerIcon {
+    display: block;
   }
 }

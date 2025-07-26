@@ -33,23 +33,28 @@ export default function NavBar() {
                 <ul>
                     <li>
                     <Link to="">
-                        <img src="/src/assets/icons/music-icon.png" alt="Music" />
+                        <img src="/src/assets/icons/music-icon.png" alt="Music" className="navIcon"/>
                     </Link>
                     </li>
                     <li>
                     <a href="https://www.linkedin.com/in/kayla-sison126/" target="_blank" rel="noopener noreferrer">
-                        <img src="/src/assets/icons/linkedin-icon.png" alt="LinkedIn" />
+                        <img src="/src/assets/icons/linkedin-icon.png" alt="LinkedIn" className="navIcon" />
                     </a>
                     </li>
-                    <li>
                     <li>
                     <a href="https://github.com/kayla-sison-126" target="_blank" rel="noopener noreferrer">
-                        <img src="/src/assets/icons/github-icon.png" alt="GitHub" />
+                        <img src="/src/assets/icons/github-icon.png" alt="GitHub" className="navIcon" />
                     </a>
                     </li>
-                    {/* <a href="/#contact-section">
+                    {/* <li>
+                    <a href="/#contact-section">
                         <img src="/src/assets/icons/mail-icon.png" alt="Contact" />
-                    </a> */}
+                    </a>
+                    </li> */}
+                    <li>
+                    <a href="/#contact-section">
+                        <img src="/src/assets/icons/hamburgerMenu.png" alt="Contact" className="hamburgerIcon"/>
+                    </a>
                     </li>
                 </ul>
                 </div>
