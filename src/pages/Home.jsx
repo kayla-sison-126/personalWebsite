@@ -3,6 +3,9 @@ import { Link  } from "react-router-dom";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
+import useSound from "use-sound";
+import click1 from "../assets/sound/button_click_1.mp3";
+import click2 from "../assets/sound/button_click_2.mp3";
 import emailjs from "@emailjs/browser";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
@@ -13,14 +16,14 @@ export default function Home() {
     emailjs.init(PUBLIC_KEY);
   }, []);
 
+  // contact form logic
   const sendEmail = (e) => {
-    console.log("PUBLIC_KEY:", PUBLIC_KEY);
     e.preventDefault();
     emailjs
       .sendForm("service_wgrybwy", "template_98bk95z", form.current, PUBLIC_KEY)
       .then(
         (result) => {
-          console.log("Email successfully sent", result.text);
+          console.log("Email successfully sent!", result.text);
           alert("Message sent!");
           form.current.reset();
         },
@@ -31,6 +34,10 @@ export default function Home() {
       );
   };
 
+  // sfx
+  // *** buttons:
+  const [click1_play] = useSound(click1);
+  const [click2_play] = useSound(click2);
 
   return (
     <>
@@ -155,11 +162,17 @@ export default function Home() {
                       href="https://www.linkedin.com/in/kayla-sison126/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={click2_play}
                     >
                       <img src="/src/assets/icons/Linkedin.png" />
                       <span>Connect on LinkedIn!</span>
                     </a>
-                    <a className="button-1" href="">
+                    <a
+                      className="button-1"
+                      href="KaylaSison_resume_7-28-25.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={click2_play}>
                       <img src="/src/assets/icons/external-link.png" />
                       <span>View my Resume!</span>
                     </a>
@@ -185,19 +198,19 @@ export default function Home() {
             <div className="animation_layer parallax" id="explore-section">
               <h1>Explore My Page!</h1>
               <div className="selection-section">
-                <Link to="/about" className="selection-button">
+                <Link to="/about" className="selection-button" onClick={click1_play}>
                   <h3>About</h3>
                   <p>Discover my story and learn more about me</p>
                 </Link>
-                <Link to="/experience" className="selection-button">
+                <Link to="/experience" className="selection-button" onClick={click1_play}>
                   <h3>Experience</h3>
                   <p>See what I've been up to over the years</p>
                 </Link>
-                <Link to="/projects" className="selection-button">
+                <Link to="/projects" className="selection-button" onClick={click1_play}>
                   <h3>Projects</h3>
                   <p>Take a look at my best work</p>
                 </Link>
-                <Link to="/blog" className="selection-button">
+                <Link to="/blog" className="selection-button" onClick={click1_play}>
                   <h3>Blog</h3>
                   <p>Read what's been on my mind lately</p>
                 </Link>
@@ -218,10 +231,10 @@ export default function Home() {
               <h1>Wanna get in touch?</h1>
               <p>Drop a message for me!</p>
               <form id="contact-form" ref={form} onSubmit={sendEmail}>
-                <input className="contact-input" type="text" name="name" placeholder="Your Name" required />
-                <input className="contact-input" type="email" name="email" placeholder="Your Email" required />
-                <textarea className="contact-textarea" name="message" placeholder="Your Message" required />
-                <button id="submit-btn" type="submit">Send</button>
+                <input className="contact-input" type="text" name="name" placeholder="Your Name" required onClick={click1_play}/>
+                <input className="contact-input" type="email" name="email" placeholder="Your Email" required onClick={click1_play} />
+                <textarea className="contact-textarea" name="message" placeholder="Your Message" required onClick={click1_play} />
+                <button id="submit-btn" type="submit" onClick={click2_play}>Send</button>
               </form>
             </div>
           </ParallaxLayer>
@@ -231,6 +244,8 @@ export default function Home() {
             <Footer id="footer" />
           </ParallaxLayer>
         </Parallax>
+
+
       </div>
     </>
   );

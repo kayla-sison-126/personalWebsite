@@ -1,6 +1,10 @@
-import { React, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
+import useSound from "use-sound";
+import bossa from "../assets/sound/bossa.mp3";
+import click1 from "../assets/sound/button_click_1.mp3";
+import click2 from "../assets/sound/button_click_2.mp3";
 
 export default function NavBar() {
   // resize navbar for mobile layout
@@ -26,29 +30,28 @@ export default function NavBar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-//   const navCenter = document.querySelector(".nav-center-wrapper");
-//   const hamburger = document.querySelector(".hamburger");
+  // sound design
+  // *** bgm:
+  const toggleBgmRef = useRef(false);
+  const [bgm_play, { stop: bgm_stop }] = useSound(bossa, {
+    interrupt: true,
+    loop: true,
+  });
+  const bgm_sound = () => {
+    if (toggleBgmRef.current) {
+      click1_play();
+      bgm_stop();
+      toggleBgmRef.current = false;
+    } else {
+      click2_play();
+      bgm_play();
+      toggleBgmRef.current = true;
+    }
+  };
 
-//   function handleResize() {
-//     if (window.innerWidth <= 950) {
-//       if (!navCenter.classList.contains("hide")) {
-//           navCenter.classList.add("hide");
-//       }
-//       if (hamburger.classList.contains("hide")) {
-//           hamburger.classList.remove("hide");
-//       }
-//     } else {
-//       if (navCenter.classList.contains("hide")) {
-//           navCenter.classList.remove("hide");
-//       }
-//       if (!hamburger.classList.contains("hide")) {
-//           hamburger.classList.add("hide");
-//       }
-//     }
-//   }
-
-//   handleResize(); // Initial check
-//   window.addEventListener("resize", handleResize); // Listen for resize
+  // *** buttons:
+  const [click1_play] = useSound(click1);
+  const [click2_play] = useSound(click2);
 
   return (
     <>
@@ -57,7 +60,7 @@ export default function NavBar() {
           {/* LEFT: logo/my name */}
           <div className="logo">
             <Link to="/">
-              <h2>kayla sison</h2>
+              <h2 onClick={click2_play}>kayla sison</h2>
             </Link>
           </div>
 
@@ -66,22 +69,22 @@ export default function NavBar() {
             <nav>
               <ul>
                 <li>
-                  <button>
+                  <button onClick={click1_play}>
                     <Link to="/about">about</Link>
                   </button>
                 </li>
                 <li>
-                  <button>
+                  <button onClick={click1_play}>
                     <Link to="/experience">experience</Link>
                   </button>
                 </li>
                 <li>
-                  <button>
+                  <button onClick={click1_play}>
                     <Link to="/projects">projects</Link>
                   </button>
                 </li>
                 <li>
-                  <button>
+                  <button onClick={click1_play}>
                     <Link to="/blog">blog</Link>
                   </button>
                 </li>
@@ -93,13 +96,13 @@ export default function NavBar() {
           <div className="icons">
             <ul>
               <li>
-                <Link to="">
+                <button onClick={bgm_sound}>
                   <img
                     src="/src/assets/icons/music-icon.png"
                     alt="Music"
                     className="navIcon"
                   />
-                </Link>
+                </button>
               </li>
               <li>
                 <a
@@ -111,6 +114,7 @@ export default function NavBar() {
                     src="/src/assets/icons/linkedin-icon.png"
                     alt="LinkedIn"
                     className="navIcon"
+                    onClick={click2_play}
                   />
                 </a>
               </li>
@@ -124,6 +128,7 @@ export default function NavBar() {
                     src="/src/assets/icons/github-icon.png"
                     alt="GitHub"
                     className="navIcon"
+                    onClick={click2_play}
                   />
                 </a>
               </li>
@@ -134,13 +139,14 @@ export default function NavBar() {
                     </li> */}
               <li>
                 <div className="hamburger" ref={hamburgerRef}>
-                  <a href="">
+                  <button>
                     <img
                       src="/src/assets/icons/hamburgerMenu.png"
                       alt="Contact"
                       className="hamburgerIcon"
+                      onClick={click2_play}
                     />
-                  </a>
+                  </button>
                 </div>
               </li>
             </ul>
