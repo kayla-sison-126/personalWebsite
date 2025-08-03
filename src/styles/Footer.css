@@ -1,13 +1,11 @@
 .footer {
     position: relative;
     overflow: hidden;
-
+    color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #FFFDF7;
     line-height: 16px;
-    margin-top: 90px;
     z-index: 999;
     height: auto;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
@@ -44,9 +44,10 @@ export default function Home() {
       <div className="parallax-container">
         <Parallax
           className="animation"
-          pages={3.5}
+          pages={3.6}
           style={{ top: "0", left: "0" }}
         >
+
           {/* Sky BG & Intro Text */}
           <ParallaxLayer offset={0} speed={0}>
             <div
@@ -65,7 +66,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Bird */}
-          <ParallaxLayer offset={0} speed={0.1}>
+          <ParallaxLayer offset={0.15} speed={0.1}>
             <div className="animation_layer parallax" id="bird">
               <img
                 src="/src/assets/home-parallax/bird.png"
@@ -75,7 +76,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Clouds */}
-          <ParallaxLayer offset={0} speed={0.3}>
+          <ParallaxLayer offset={0.15} speed={0.3}>
             <div className="animation_layer parallax" id="cloud-3">
               <img
                 src="/src/assets/home-parallax/cloud-3.png"
@@ -83,7 +84,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.4}>
+          <ParallaxLayer offset={0.38} speed={0.4}>
             <div className="animation_layer parallax" id="cloud-2">
               <img
                 src="/src/assets/home-parallax/cloud-2.png"
@@ -91,7 +92,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.7}>
+          <ParallaxLayer offset={0.43} speed={0.7}>
             <div className="animation_layer parallax" id="cloud-1">
               <img
                 src="/src/assets/home-parallax/cloud-1.png"
@@ -99,7 +100,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.7}>
+          <ParallaxLayer offset={0.6} speed={0.7}>
             <div className="animation_layer parallax" id="cloud-1-2">
               <img
                 src="/src/assets/home-parallax/cloud-1.png"
@@ -109,7 +110,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Hills */}
-          <ParallaxLayer offset={0} speed={0.7}>
+          <ParallaxLayer offset={1} speed={0.7}>
             <div className="animation_layer parallax" id="grass-4">
               <img
                 src="/src/assets/home-parallax/grass-4.png"
@@ -117,7 +118,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.75}>
+          <ParallaxLayer offset={1} speed={0.75}>
             <div className="animation_layer parallax" id="grass-3">
               <img
                 src="/src/assets/home-parallax/grass-3.png"
@@ -125,7 +126,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.8}>
+          <ParallaxLayer offset={1} speed={0.8}>
             <div className="animation_layer parallax" id="grass-2">
               <img
                 src="/src/assets/home-parallax/grass-2.png"
@@ -133,7 +134,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.9}>
+          <ParallaxLayer offset={1} speed={0.9}>
             <div className="animation_layer parallax" id="grass-1">
               <img
                 src="/src/assets/home-parallax/grass-1.png"
@@ -142,8 +143,19 @@ export default function Home() {
             </div>
           </ParallaxLayer>
 
+
+          {/* more grass */}
+          <ParallaxLayer offset={2.1} speed={0.9}>
+            <div className="animation_layer parallax" id="grass-0">
+              <img
+                src="/src/assets/home-parallax/grass-0.png"
+                className="parallax-grass"
+              />
+            </div>
+          </ParallaxLayer>
+
           {/* Greeting Card Section */}
-          <ParallaxLayer offset={1} speed={1}>
+          <ParallaxLayer offset={1.3} speed={1}>
             <div className="animation_layer parallax">
               <div className="greeting-card">
                 <div className="greeting-box">
@@ -172,7 +184,8 @@ export default function Home() {
                       href="KaylaSison_resume_7-28-25.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={click2_play}>
+                      onClick={click2_play}
+                    >
                       <img src="/src/assets/icons/external-link.png" />
                       <span>View my Resume!</span>
                     </a>
@@ -182,70 +195,118 @@ export default function Home() {
               </div>
             </div>
           </ParallaxLayer>
-
-          {/* more grass */}
-          <ParallaxLayer offset={0} speed={0.9}>
-            <div className="animation_layer parallax" id="grass-0">
-              <img
-                src="/src/assets/home-parallax/grass-0.png"
-                className="parallax-grass"
-              />
-            </div>
-          </ParallaxLayer>
-
           {/* Explore My Page section */}
-          <ParallaxLayer offset={0} speed={0.9}>
+          <ParallaxLayer offset={2} speed={1}>
             <div className="animation_layer parallax" id="explore-section">
               <h1>Explore My Page!</h1>
-              <div className="selection-section">
-                <Link to="/about" className="selection-button" onClick={click1_play}>
-                  <h3>About</h3>
-                  <p>Discover my story and learn more about me</p>
-                </Link>
-                <Link to="/experience" className="selection-button" onClick={click1_play}>
-                  <h3>Experience</h3>
-                  <p>See what I've been up to over the years</p>
-                </Link>
-                <Link to="/projects" className="selection-button" onClick={click1_play}>
-                  <h3>Projects</h3>
-                  <p>Take a look at my best work</p>
-                </Link>
-                <Link to="/blog" className="selection-button" onClick={click1_play}>
-                  <h3>Blog</h3>
-                  <p>Read what's been on my mind lately</p>
-                </Link>
+              <div className="selection-all">
+                <div className="selection-section">
+                  <Link
+                    to="/about"
+                    className="selection-button"
+                    onClick={click1_play}
+                  >
+                    <h3>About</h3>
+                    <p>Discover my story and learn more about me</p>
+                  </Link>
+                  <Link
+                    to="/experience"
+                    className="selection-button"
+                    onClick={click1_play}
+                  >
+                    <h3>Experience</h3>
+                    <p>See what I've been up to over the years</p>
+                  </Link>
+                </div>
+                <div className="selection-section">
+                  <Link
+                    to="/projects"
+                    className="selection-button"
+                    onClick={click1_play}
+                  >
+                    <h3>Projects</h3>
+                    <p>Take a look at my best work</p>
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="selection-button"
+                    onClick={click1_play}
+                  >
+                    <h3>Blog</h3>
+                    <p>Read what's been on my mind lately</p>
+                  </Link>
+                </div>
               </div>
             </div>
           </ParallaxLayer>
 
-          {/* Flower Field */}
-          <ParallaxLayer offset={0} speed={0.9}>
+          {/* Contact section */}
+          <ParallaxLayer offset={2.7} speed={0.9}>
             <div className="animation_layer parallax" id="flower-field">
               <img src="/src/assets/home-parallax/flower-field.png" />
             </div>
-          </ParallaxLayer>
-
-          {/* Contact section */}
-          <ParallaxLayer offset={0} speed={0.9}>
             <div className="animation_layer parallax" id="contact-section">
               <h1>Wanna get in touch?</h1>
               <p>Drop a message for me!</p>
               <form id="contact-form" ref={form} onSubmit={sendEmail}>
-                <input className="contact-input" type="text" name="name" placeholder="Your Name" required onClick={click1_play}/>
-                <input className="contact-input" type="email" name="email" placeholder="Your Email" required onClick={click1_play} />
-                <textarea className="contact-textarea" name="message" placeholder="Your Message" required onClick={click1_play} />
-                <button id="submit-btn" type="submit" onClick={click2_play}>Send</button>
+                <input
+                  className="contact-input"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  onClick={click1_play}
+                />
+                <input
+                  className="contact-input"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  onClick={click1_play}
+                />
+                <textarea
+                  className="contact-textarea"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                  onClick={click1_play}
+                />
+                <button id="submit-btn" type="submit" onClick={click2_play}>
+                  Send
+                </button>
               </form>
             </div>
+
+            <br />
+            <br />
+            {/* <Footer /> */}
           </ParallaxLayer>
 
           {/* Footer */}
-          <ParallaxLayer offset={2.99} speed={0.9}>
-            <Footer id="footer" />
+          <ParallaxLayer offset={3.0} speed={0.5} style={{ zIndex: 10 }}>
+            {/* <div className="footer"> */}
+            <div className="custom-footer">
+              <div className="footer-wave">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                  <path
+                    d="M0,80 C360,160 1080,0 1440,80 L1440,0 L0,0 Z"
+                    fill="#779E4B"
+                  />
+                </svg>
+              </div>
+              <p>Created by Kayla Sison</p>
+              <div className="footer-links">
+                <a href="https://linkedin.com/in/kayla-sison126">LinkedIn</a>
+                <a href="https://github.com/kayla-sison-126">GitHub</a>
+              </div>
+              <br />
+              <p>© 2025 Kayla Sison</p>
+            </div>
+            {/* </div> */}
           </ParallaxLayer>
+          {/* <Footer /> */}
         </Parallax>
-
-
       </div>
     </>
   );

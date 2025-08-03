@@ -6,18 +6,18 @@
 This project is my **portfolio and blog** site that showcases who I am as a developer, creator, and student. It's filled with my personality and style! This site combines a charming interface with clear, navigable sections to provide insight into my experience, projects, and blog.
 
 > Designed to act as both a portfolio hub and a personal blog.
-### 🚧 **Currently in development — more features, content, and deployment coming soon!**
+### 🚧 **Currently in development: more features, content, and deployment coming soon!**
 
 ![Home GIF](src/assets/README/Home.gif)
 
 
 ## 🚀 Features
-- 🏠 **Home**: Parallax landing page using React Spring, site navigation section, and contact section implemented with EmailJS
-- 👩‍💻 **About**: Extended bio, technical skills, achievements, and photo gallery
-- 💼 **Experience**: Professional timeline + downloadable resume
-- 🛠️ **Projects**: Visual project showcase with descriptions
-- ✍️ **Blog**: Writing space for sharing my reflections on professional experiences and projects
-- ❌ **Custom 404 Page**: Friendly error page for broken links
+- **Home**: Parallax landing page using React Spring, site navigation section, and contact section implemented with EmailJS
+-**About**: Extended bio, technical skills, achievements, and photo gallery
+- **Experience**: Professional timeline + downloadable resume
+- **Projects**: Visual project showcase with descriptions
+- **Blog**: Writing space for sharing my reflections on professional experiences and projects
+- **Custom 404 Page**: Friendly error page for broken links
 
 
 ## 🧭 Page Overview
