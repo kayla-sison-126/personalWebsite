@@ -1,19 +1,29 @@
-import { useState } from 'react'
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Experience from "./pages/Experience"
-import Projects from "./pages/Projects"
-import Blog from "./pages/Blog"
-import Error from "./pages/Error"
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+import Error from "./pages/Error";
+import ClickSpark from "./assets/ClickSpark";
+
 
 function App() {
   return (
     <BrowserRouter>
-    <NavBar />
+      <ClickSpark
+        sparkColor="#ffffff"
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+        style={{ minHeight: "100vh" , zIndex: "100"}}
+      > {/* clicking animation */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,8 +33,9 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       {/* <Footer /> */}
+      </ClickSpark>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

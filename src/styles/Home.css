@@ -9,6 +9,14 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 4rem;
   line-height: 1.1;
+  padding-top: 5.5vh;
+}
+
+#header-text-animated {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  line-height: 1.1;
   padding-top: 6vh;
 }
 
@@ -17,7 +25,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
 }
 
 .greeting-card {

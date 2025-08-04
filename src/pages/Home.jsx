@@ -6,6 +6,7 @@ import useSound from "use-sound";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 import emailjs from "@emailjs/browser";
+import ShinyText from "../assets/ShinyText";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Home() {
@@ -46,13 +47,19 @@ export default function Home() {
           pages={3.6}
           style={{ top: "0", left: "0" }}
         >
-
           {/* Sky BG & Intro Text */}
           <ParallaxLayer offset={0} speed={0}>
             <div
               className="animation_layer parallax"
               id="sky-bg"
               style={{ height: "100vh" }}
+            />
+          </ParallaxLayer>
+
+          
+          <ParallaxLayer offset={0} speed={1.2}>
+            <div
+              className="animation_layer parallax"
             >
               <div className="header">
                 <h1 id="header-text">
@@ -75,7 +82,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Clouds */}
-          <ParallaxLayer offset={0.15} speed={0.3}>
+          <ParallaxLayer offset={0.15} speed={0.2}>
             <div className="animation_layer parallax" id="cloud-3">
               <img
                 src="/src/assets/home-parallax/cloud-3.png"
@@ -141,7 +148,6 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-
 
           {/* more grass */}
           <ParallaxLayer offset={2.1} speed={0.9}>
