@@ -6,7 +6,7 @@ import useSound from "use-sound";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 import emailjs from "@emailjs/browser";
-import ShinyText from "../assets/ShinyText";
+import Typewriter from "typewriter-effect";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Home() {
@@ -39,6 +39,19 @@ export default function Home() {
   const [click1_play] = useSound(click1);
   const [click2_play] = useSound(click2);
 
+  // typewriter text
+  // const helloText = useRef();
+
+  // useEffect(() => {
+  //   const typewriter = new Typewriter(helloText.current, {
+  //     loop: false,
+  //     delay: 75, 
+  //     skipAddStyles: true, 
+  //   });
+
+  //   typewriter.typeString("Hello,<br /> I'm Kayla!").start();
+  // }, []);
+
   return (
     <>
       <div className="parallax-container">
@@ -56,16 +69,35 @@ export default function Home() {
             />
           </ParallaxLayer>
 
-          
           <ParallaxLayer offset={0} speed={1.2}>
-            <div
-              className="animation_layer parallax"
-            >
+            <div className="animation_layer parallax">
               <div className="header">
-                <h1 id="header-text">
+                {/* <h1 id="header-text">
                   Hello, <br />
                   I'm Kayla!
-                </h1>
+                </h1> */}
+                <div className="typewriter-text">
+                  {/* <Typewriter
+                    options={{
+                      strings: ["Hello,<br /> I'm Kayla!"],
+                      autoStart: true,
+                      loop: true,
+                      skipAddStyles: true,
+                    }}
+                  /> */}
+
+                  <Typewriter
+  onInit={(typewriter) => {
+    typewriter.typeString('Hello,<br />  I\'m Kayla! ')
+      .start()
+      .callFunction(() => {
+        console.log('All strings were deleted');
+      })
+  }} options={{
+    cursor: '_',
+  }}
+/>
+                </div>
                 <img src="/src/assets/icons/arrow-down.png" />
               </div>
             </div>

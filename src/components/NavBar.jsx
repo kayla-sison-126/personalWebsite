@@ -144,19 +144,19 @@ export default function NavBar() {
         <div className="nav-center-relative">
           <div className="nav-center-wrapper" ref={navCenterRef}>
             <nav>
-              <Link to="/" onClick={click1_play}>
+              <Link to="/" onClick={click1_play} style={{ paddingLeft: "30px" }}>
                 home
               </Link>
-              <Link to="/about" onClick={click1_play}>
+              <Link to="/about" onClick={click1_play} style={{ paddingLeft: "30px" }}>
                 about
               </Link>
-              <Link to="/experience" onClick={click1_play}>
+              <Link to="/experience" onClick={click1_play} style={{ paddingLeft: "30px", paddingRight: "30px"}}>
                 experience
               </Link>
-              <Link to="/projects" onClick={click1_play}>
+              <Link to="/projects" onClick={click1_play} style={{ paddingRight: "30px"}}>
                 projects
               </Link>
-              <Link to="/blog" onClick={click1_play}>
+              <Link to="/blog" onClick={click1_play} style={{ paddingRight: "30px"}}>
                 blog
               </Link>
             </nav>

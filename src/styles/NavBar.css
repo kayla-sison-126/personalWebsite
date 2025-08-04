@@ -84,7 +84,7 @@ nav {
   height: 2px;
   backdrop-filter: blur(6px);
   margin: 0 auto;
-  gap: 40px;
+  /* gap: 40px; */
 }
 
 nav a {
