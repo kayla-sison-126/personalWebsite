@@ -10,13 +10,13 @@ import Typewriter from "typewriter-effect";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Home() {
+  // contact form logic
   const form = useRef();
 
   useEffect(() => {
     emailjs.init(PUBLIC_KEY);
   }, []);
 
-  // contact form logic
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -35,22 +35,8 @@ export default function Home() {
   };
 
   // sfx
-  // *** buttons:
   const [click1_play] = useSound(click1);
   const [click2_play] = useSound(click2);
-
-  // typewriter text
-  // const helloText = useRef();
-
-  // useEffect(() => {
-  //   const typewriter = new Typewriter(helloText.current, {
-  //     loop: false,
-  //     delay: 75, 
-  //     skipAddStyles: true, 
-  //   });
-
-  //   typewriter.typeString("Hello,<br /> I'm Kayla!").start();
-  // }, []);
 
   return (
     <>
@@ -60,7 +46,7 @@ export default function Home() {
           pages={3.6}
           style={{ top: "0", left: "0" }}
         >
-          {/* Sky BG & Intro Text */}
+          {/* Sky BG */}
           <ParallaxLayer offset={0} speed={0}>
             <div
               className="animation_layer parallax"
@@ -69,34 +55,24 @@ export default function Home() {
             />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0} speed={1.2}>
+          {/* Intro Text */}
+          <ParallaxLayer offset={0} speed={1.2} sticky={ {start: 0, end: 0.15 }}>
             <div className="animation_layer parallax">
               <div className="header">
-                {/* <h1 id="header-text">
-                  Hello, <br />
-                  I'm Kayla!
-                </h1> */}
                 <div className="typewriter-text">
-                  {/* <Typewriter
-                    options={{
-                      strings: ["Hello,<br /> I'm Kayla!"],
-                      autoStart: true,
-                      loop: true,
-                      skipAddStyles: true,
-                    }}
-                  /> */}
-
                   <Typewriter
-  onInit={(typewriter) => {
-    typewriter.typeString('Hello,<br />  I\'m Kayla! ')
-      .start()
-      .callFunction(() => {
-        console.log('All strings were deleted');
-      })
-  }} options={{
-    cursor: '_',
-  }}
-/>
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString("Hello,<br />  I'm Kayla! ")
+                        .start()
+                        .callFunction(() => {
+                          console.log("All strings were deleted");
+                        });
+                    }}
+                    options={{
+                      cursor: "_",
+                    }}
+                  />
                 </div>
                 <img src="/src/assets/icons/arrow-down.png" />
               </div>
@@ -106,10 +82,12 @@ export default function Home() {
           {/* Bird */}
           <ParallaxLayer offset={0.15} speed={0.1}>
             <div className="animation_layer parallax" id="bird">
-              <img
-                src="/src/assets/home-parallax/bird.png"
-                className="parallax-bird"
-              />
+              <button onClick={click2_play}>
+                <img
+                  src="/src/assets/home-parallax/bird.png"
+                  className="parallax-bird"
+                />
+              </button>
             </div>
           </ParallaxLayer>
 
@@ -130,7 +108,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.43} speed={0.7}>
+          <ParallaxLayer offset={0.43} speed={0.6}>
             <div className="animation_layer parallax" id="cloud-1">
               <img
                 src="/src/assets/home-parallax/cloud-1.png"
@@ -138,7 +116,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.6} speed={0.7}>
+          <ParallaxLayer offset={0.6} speed={0.6}>
             <div className="animation_layer parallax" id="cloud-1-2">
               <img
                 src="/src/assets/home-parallax/cloud-1.png"
@@ -148,7 +126,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Hills */}
-          <ParallaxLayer offset={1} speed={0.7}>
+          <ParallaxLayer offset={1.07} speed={0.7}>
             <div className="animation_layer parallax" id="grass-4">
               <img
                 src="/src/assets/home-parallax/grass-4.png"
@@ -156,7 +134,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.75}>
+          <ParallaxLayer offset={1.08} speed={0.8}>
             <div className="animation_layer parallax" id="grass-3">
               <img
                 src="/src/assets/home-parallax/grass-3.png"
@@ -164,7 +142,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.8}>
+          <ParallaxLayer offset={1.0} speed={1.1}>
             <div className="animation_layer parallax" id="grass-2">
               <img
                 src="/src/assets/home-parallax/grass-2.png"
@@ -172,7 +150,7 @@ export default function Home() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.9}>
+          <ParallaxLayer offset={1.0} speed={1.3}>
             <div className="animation_layer parallax" id="grass-1">
               <img
                 src="/src/assets/home-parallax/grass-1.png"
@@ -192,7 +170,7 @@ export default function Home() {
           </ParallaxLayer>
 
           {/* Greeting Card Section */}
-          <ParallaxLayer offset={1.3} speed={1}>
+          <ParallaxLayer offset={1.4} speed={1}>
             <div className="animation_layer parallax">
               <div className="myself-mobile">
                 <img src="/src/assets/myself-1.png" />
