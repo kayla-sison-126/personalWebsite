@@ -1,35 +1,9 @@
-import { useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import "../styles/About.css";
+import "../styles/About.module.css";
 import Footer from "../components/Footer";
-import emailjs from "@emailjs/browser";
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function About() {
-  const form = useRef();
-
-  useEffect(() => {
-    emailjs.init(PUBLIC_KEY);
-  }, []);
-
-  const sendEmail = (e) => {
-    console.log("PUBLIC_KEY:", PUBLIC_KEY);
-    e.preventDefault();
-    emailjs
-      .sendForm("service_wgrybwy", "template_98bk95z", form.current, PUBLIC_KEY)
-      .then(
-        (result) => {
-          console.log("Email successfully sent", result.text);
-          alert("Message sent!");
-          form.current.reset();
-        },
-        (error) => {
-          console.error("Failed to send email:", error.text);
-          alert("Oops! Something went wrong.");
-        }
-      );
-  };
-
+  
   return (
     <>
       <div className="parallax-container">
@@ -49,7 +23,7 @@ export default function About() {
           </ParallaxLayer>
 
           {/* Hills */}
-          <ParallaxLayer offset={0} speed={0.8}>
+          <ParallaxLayer offset={0.2} speed={0.8}>
             <div className="animation_layer parallax" id="grass-2-sub">
               <img
                 src="/src/assets/home-parallax/grass-2.png"
@@ -57,7 +31,7 @@ export default function About() {
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={0.9}>
+          <ParallaxLayer offset={0.4} speed={0.9}>
             <div className="animation_layer parallax" id="grass-1-sub">
               <img
                 src="/src/assets/home-parallax/grass-1.png"
@@ -123,19 +97,19 @@ export default function About() {
           </ParallaxLayer>
 
           {/* more grass */}
-          <ParallaxLayer offset={0} speed={0.9}>
+          {/* <ParallaxLayer offset={0} speed={0.9}>
             <div className="animation_layer parallax" id="grass-0-sub">
               <img
                 src="/src/assets/home-parallax/grass-0.png"
                 className="parallax-grass"
               />
             </div>
-          </ParallaxLayer>
+          </ParallaxLayer> */}
 
           {/* Footer */}
-          <ParallaxLayer offset={2.99} speed={0.9}>
+          {/* <ParallaxLayer offset={2.99} speed={0.9}>
             <Footer id="footer" />
-          </ParallaxLayer>
+          </ParallaxLayer> */}
         </Parallax>
       </div>
     </>

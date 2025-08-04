@@ -3,13 +3,11 @@
 }
 
 #header-text {
-  display: flex;
-  justify-self: center;
   text-align: center;
   color: white;
   text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 6vw;
+  font-size: 4rem;
   line-height: 1.1;
   padding-top: 6vh;
 }
@@ -23,47 +21,61 @@
 }
 
 .greeting-card {
-  background-color: #fffdf7;
-  border: 8px solid #f3e5b1;
-  border-radius: 30px;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-  max-width: 600px;
-  height: auto;
-  padding: 16px;
-  margin: 20px auto;
-  overflow: visible;
+    background-color: #FFFDF7;
+    border-style: solid;
+    border-width: 8px;
+    border-radius: 30px;
+    border-color: #F3E5B1;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    width: 600px;
+    height: 300px;
+    overflow: visible;
+    padding-bottom: 16px;
+    position: relative;
 }
 
 .greeting-box {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-self: center;
-  padding: 10px;
-  padding-left: 40px;
-  padding-top: 16px;
-  font-family: "Josefin Sans", sans-serif;
-  color: #97c7d6;
-  font-weight: 350;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 10px;
+    padding-left: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #97C7D6;
+    font-weight: 350;
+}
+
+.myself-1 {
+    max-width: 100%;
+    height: auto;
+    padding-right: 32px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
+.myself-mobile {
+  display: none;
 }
 
 .greeting-box h2 {
   margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
 .greeting-box p {
   margin-top: 0;
+  font-size: 1.1rem;
 }
 
 .button-section {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .button-1 {
@@ -94,13 +106,50 @@
   opacity: 0.8;
 }
 
-.myself-1 {
-  max-width: 100%;
-  height: auto;
-  padding-right: 32px;
-  margin-top: -40px;
-  margin-bottom: -40px;
+/* responsive card */
+
+@media (max-width: 650px) {
+  .greeting-card {
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    height: auto;
+  }
+
+  .myself-1 {
+  display: none;
+  }
+
+  .myself-mobile {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: -45%;
+    transform: translateX(-50%);
+  }
+
+  .greeting-box {
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+  }
+
+  .greeting-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .greeting-box p {
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: center;
+  }
 }
+
 
 /* parallax styling -------------------------------*/
 
@@ -307,9 +356,9 @@
   justify-content: center;
   gap: 20px;
   padding-top: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
   flex-wrap: wrap;
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 
 .selection-section {
@@ -336,6 +385,12 @@
 
 .selection-button:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 650px) {
+  .selection-section {
+  width: 80vw;
+}
 }
 
 /* contact  ------------------------------- */
@@ -383,7 +438,8 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   padding: 12px 16px;
-  width: 525px;
+  width: 60vw;
+  max-width: 550px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

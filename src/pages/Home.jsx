@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Home.css";
-import Footer from "../components/Footer";
 import useSound from "use-sound";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
@@ -157,6 +156,9 @@ export default function Home() {
           {/* Greeting Card Section */}
           <ParallaxLayer offset={1.3} speed={1}>
             <div className="animation_layer parallax">
+              <div className="myself-mobile">
+                <img src="/src/assets/myself-1.png" />
+              </div>
               <div className="greeting-card">
                 <div className="greeting-box">
                   <h2>Nice to Meet You!</h2>
@@ -280,12 +282,10 @@ export default function Home() {
 
             <br />
             <br />
-            {/* <Footer /> */}
           </ParallaxLayer>
 
           {/* Footer */}
           <ParallaxLayer offset={3.0} speed={0.5} style={{ zIndex: 10 }}>
-            {/* <div className="footer"> */}
             <div className="custom-footer">
               <div className="footer-wave">
                 <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
@@ -303,9 +303,7 @@ export default function Home() {
               <br />
               <p>© 2025 Kayla Sison</p>
             </div>
-            {/* </div> */}
           </ParallaxLayer>
-          {/* <Footer /> */}
         </Parallax>
       </div>
     </>

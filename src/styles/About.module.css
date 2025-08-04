@@ -52,6 +52,14 @@
     font-weight: 350;
 }
 
+.myself-1 {
+    max-width: 100%;
+    height: auto;
+    padding-right: 32px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
 .greeting-box h2 {
   margin-bottom: 10px;
 }
@@ -95,13 +103,6 @@
   opacity: 0.8;
 }
 
-.myself-1 {
-    max-width: 100%;
-    height: auto;
-    padding-right: 32px;
-    margin-top: -40px;
-    margin-bottom: -40px;
-}
 
 
 /* parallax styling -------------------------------*/
@@ -142,9 +143,8 @@
 }
 
 #grass-2-sub {
-  width: 100%;
+  width: 100vw;
   position: absolute;
-  top: 125px;
   left: 0;
   z-index: 1;
 }
@@ -159,7 +159,6 @@
 #grass-1-sub {
   width: 100%;
   position: absolute;
-  top: 100px;
   left: 0;
   z-index: 1;
 }
@@ -182,12 +181,4 @@
 #grass-0-sub img {
     width: 100vw;
     height: auto;
-}
-
-/* footer ---------------------------------------------- */
-
-.footer {
-  width: 100%;
-  z-index: 1000;
-  margin-top: 400px;
 }

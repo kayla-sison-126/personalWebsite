@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
 import useSound from "use-sound";
@@ -7,15 +7,15 @@ import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 
 export default function NavBar() {
-  // resize navbar for mobile layout
-  const navCenterRef = useRef(null);
-  const hamburgerRef = useRef(null);
+  // resize navbar for narrower layout
+  const navCenterRef = useRef(null); // navigation links
+  const hamburgerRef = useRef(null); // hamburger icon
 
   useEffect(() => {
     function handleResize() {
       if (!navCenterRef.current || !hamburgerRef.current) return;
 
-      if (window.innerWidth <= 950) {
+      if (window.innerWidth <= 1030) {
         navCenterRef.current.classList.add("hide");
         hamburgerRef.current.classList.remove("hide");
       } else {
@@ -30,7 +30,26 @@ export default function NavBar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // hamburger menu
+  const dropdownRef = useRef(null);
+  const [hamburgerMenuOn, setHamburgerMenu] = useState(false);
+
+  function hamburgerClick() {
+    setHamburgerMenu((prev) => {
+      const isOpening = !prev;
+      if (dropdownRef.current) {
+        dropdownRef.current.classList.toggle("show", isOpening);
+      }
+      return isOpening;
+    });
+  }
+
   // sound design
+
+  // *** buttons:
+  const [click1_play] = useSound(click1);
+  const [click2_play] = useSound(click2);
+
   // *** bgm:
   const toggleBgmRef = useRef(false);
   const [bgm_play, { stop: bgm_stop }] = useSound(bossa, {
@@ -49,10 +68,6 @@ export default function NavBar() {
     }
   };
 
-  // *** buttons:
-  const [click1_play] = useSound(click1);
-  const [click2_play] = useSound(click2);
-
   return (
     <>
       <header>
@@ -62,34 +77,6 @@ export default function NavBar() {
             <Link to="/">
               <h2 onClick={click2_play}>kayla sison</h2>
             </Link>
-          </div>
-
-          {/* MIDDLE: navigation links */}
-          <div className="nav-center-wrapper" ref={navCenterRef}>
-            <nav>
-              <ul>
-                <li>
-                  <button onClick={click1_play}>
-                    <Link to="/about">about</Link>
-                  </button>
-                </li>
-                <li>
-                  <button onClick={click1_play}>
-                    <Link to="/experience">experience</Link>
-                  </button>
-                </li>
-                <li>
-                  <button onClick={click1_play}>
-                    <Link to="/projects">projects</Link>
-                  </button>
-                </li>
-                <li>
-                  <button onClick={click1_play}>
-                    <Link to="/blog">blog</Link>
-                  </button>
-                </li>
-              </ul>
-            </nav>
           </div>
 
           {/* RIGHT: icons */}
@@ -139,7 +126,7 @@ export default function NavBar() {
                     </li> */}
               <li>
                 <div className="hamburger" ref={hamburgerRef}>
-                  <button>
+                  <button onClick={hamburgerClick}>
                     <img
                       src="/src/assets/icons/hamburgerMenu.png"
                       alt="Contact"
@@ -151,6 +138,47 @@ export default function NavBar() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* MIDDLE: navigation links */}
+        <div className="nav-center-relative">
+          <div className="nav-center-wrapper" ref={navCenterRef}>
+            <nav>
+              <Link to="/" onClick={click1_play}>
+                home
+              </Link>
+              <Link to="/about" onClick={click1_play}>
+                about
+              </Link>
+              <Link to="/experience" onClick={click1_play}>
+                experience
+              </Link>
+              <Link to="/projects" onClick={click1_play}>
+                projects
+              </Link>
+              <Link to="/blog" onClick={click1_play}>
+                blog
+              </Link>
+            </nav>
+          </div>
+        </div>
+
+        <div className="nav-dropdown-mobile" ref={dropdownRef}>
+          <Link to="/" onClick={click1_play}>
+            home
+          </Link>
+          <Link to="/about" onClick={click1_play}>
+            about
+          </Link>
+          <Link to="/experience" onClick={click1_play}>
+            experience
+          </Link>
+          <Link to="/projects" onClick={click1_play}>
+            projects
+          </Link>
+          <Link to="/blog" onClick={click1_play}>
+            blog
+          </Link>
         </div>
       </header>
     </>
