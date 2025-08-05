@@ -2,15 +2,7 @@
   background-color: #779e4b;
 }
 
-#header-text {
-  text-align: center;
-  color: white;
-  text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 4rem;
-  line-height: 1.1;
-  padding-top: 5.5vh;
-}
+
 
 #header-text-animated {
   text-align: center;
