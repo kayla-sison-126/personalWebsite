@@ -1,38 +1,43 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import "../styles/About.module.css";
-import Footer from "../components/Footer";
+import "../styles/Standard.css";
+import styles from "../styles/About.module.css";
+import useSound from "use-sound";
+import click1 from "../assets/sound/button_click_1.mp3";
+import click2 from "../assets/sound/button_click_2.mp3";
 
 export default function About() {
-  
+  // sfx
+  const [click1_play] = useSound(click1);
+  const [click2_play] = useSound(click2);
+
   return (
     <>
       <div className="parallax-container">
         <Parallax
           className="animation"
-          pages={3.5}
+          pages={3.6}
           style={{ top: "0", left: "0" }}
         >
-          {/* Sky BG & Intro Text */}
+          {/* Sky BG */}
           <ParallaxLayer offset={0} speed={0}>
             <div
               className="animation_layer parallax"
               id="sky-bg"
               style={{ height: "100vh" }}
-            >
-            </div>
+            />
           </ParallaxLayer>
 
           {/* Hills */}
-          <ParallaxLayer offset={0.2} speed={0.8}>
-            <div className="animation_layer parallax" id="grass-2-sub">
+          <ParallaxLayer offset={0.18} speed={1.1}>
+            <div className="animation_layer parallax" id="standard-grass-2">
               <img
                 src="/src/assets/home-parallax/grass-2.png"
                 className="parallax-grass"
               />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={0.4} speed={0.9}>
-            <div className="animation_layer parallax" id="grass-1-sub">
+          <ParallaxLayer offset={0.16} speed={1.3}>
+            <div className="animation_layer parallax" id="standard-grass-1">
               <img
                 src="/src/assets/home-parallax/grass-1.png"
                 className="parallax-grass"
@@ -40,40 +45,42 @@ export default function About() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0} speed={0.9}>
-              <div className="header">
-                <h1 id="header-text">About</h1>
+          {/* Intro Text */}
+          <ParallaxLayer offset={0.20} speed={1.5}>
+            <div className="animation_layer parallax">
+              <div className="standard-header">
+                <h2 className="header-text">About</h2>
                 <img src="/src/assets/icons/arrow-down.png" />
               </div>
+            </div>
+          </ParallaxLayer>
+
+          {/* more grass */}
+          <ParallaxLayer offset={2.3} speed={0.9}>
+            <div className="animation_layer parallax" id="grass-0">
+              <img
+                src="/src/assets/home-parallax/grass-0.png"
+                className="parallax-grass"
+              />
+            </div>
           </ParallaxLayer>
 
           {/* Greeting Card Section */}
-          <ParallaxLayer offset={1} speed={1}>
+          <ParallaxLayer offset={1.5} speed={1}>
             <div className="animation_layer parallax">
+              <div className="myself-mobile">
+                <img src="/src/assets/myself-1.png" />
+              </div>
               <div className="greeting-card">
                 <div className="greeting-box">
-                  <h2>About Me</h2>
+                  <h2>Nice to Meet You!</h2>
                   <p>
-                    I'm Kayla, a Filipino-American from the Chicago area
-                    currently studying Computer Science & Statistics at the
-                    University of Illinois Urbana-Champaign. I've always been
-                    drawn to the intersection of logic and creativity, whether
-                    it's solving a tricky algorithm problem or designing a
-                    clean, intuitive user experience. That's what led me to
-                    focus on software engineering, web development, and UI/UX
-                    design. I take pride in thinking from both a developer's and
-                    a designer's perspective, and I enjoy building projects that
-                    blend strong technical foundations with a sense of visual
-                    polish and clarity.
+                    I'm Kayla Sison, a Computer Science & Statistics student at
+                    the University of Illinois Urbana-Champaign.
                     <br />
                     <br />
-                    Outside of tech, I like to do arts & crafts, especially
-                    crochet. I especially love donating my crochet creations to
-                    charity. I've also been a concert percussionist since 2014,
-                    performing in ensembles at the University of Illinois
-                    Chicago and the University of Chicago. When I'm not coding
-                    or making art and music, you can usually find me exploring
-                    cafes and trying out new drinks.
+                    My tech interests include software engineering, web
+                    development, and UI/UX design.
                   </p>
                   <div className="button-section">
                     <a
@@ -81,11 +88,18 @@ export default function About() {
                       href="https://www.linkedin.com/in/kayla-sison126/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={click2_play}
                     >
                       <img src="/src/assets/icons/Linkedin.png" />
                       <span>Connect on LinkedIn!</span>
                     </a>
-                    <a className="button-1" href="">
+                    <a
+                      className="button-1"
+                      href="KaylaSison_resume_7-28-25.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={click2_play}
+                    >
                       <img src="/src/assets/icons/external-link.png" />
                       <span>View my Resume!</span>
                     </a>
@@ -95,21 +109,27 @@ export default function About() {
               </div>
             </div>
           </ParallaxLayer>
-
-          {/* more grass */}
-          {/* <ParallaxLayer offset={0} speed={0.9}>
-            <div className="animation_layer parallax" id="grass-0-sub">
-              <img
-                src="/src/assets/home-parallax/grass-0.png"
-                className="parallax-grass"
-              />
-            </div>
-          </ParallaxLayer> */}
-
+          
           {/* Footer */}
-          {/* <ParallaxLayer offset={2.99} speed={0.9}>
-            <Footer id="footer" />
-          </ParallaxLayer> */}
+          <ParallaxLayer offset={3.0} speed={0.5} style={{ zIndex: 10 }}>
+            <div className="custom-footer">
+              <div className="footer-wave">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                  <path
+                    d="M0,80 C360,160 1080,0 1440,80 L1440,0 L0,0 Z"
+                    fill="#779E4B"
+                  />
+                </svg>
+              </div>
+              <p>Created by Kayla Sison</p>
+              <div className="footer-links">
+                <a href="https://linkedin.com/in/kayla-sison126">LinkedIn</a>
+                <a href="https://github.com/kayla-sison-126">GitHub</a>
+              </div>
+              <br />
+              <p>© 2025 Kayla Sison</p>
+            </div>
+          </ParallaxLayer>
         </Parallax>
       </div>
     </>

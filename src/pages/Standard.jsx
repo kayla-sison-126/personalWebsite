@@ -1,11 +1,16 @@
+// ---------------------------
+// A standard page template
+// (ex: used for the About pg)
+// ---------------------------
+
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Standard.css";
-// import styles from "../styles/Experience.module.css";
+// import styles from "../styles/Standard.module.css";
 // import useSound from "use-sound";
 // import click1 from "../assets/sound/button_click_1.mp3";
 // import click2 from "../assets/sound/button_click_2.mp3";
 
-export default function Projects() {
+export default function Standard() {
   // sfx
   // const [click1_play] = useSound(click1);
   // const [click2_play] = useSound(click2);
@@ -49,7 +54,7 @@ export default function Projects() {
           <ParallaxLayer offset={0.2} speed={1.5}>
             <div className="animation_layer parallax">
               <div className="standard-header">
-                <h2 className="header-text">Projects</h2>
+                <h2 className="header-text">Title</h2>
                 <img src="/src/assets/icons/arrow-down.png" />
               </div>
             </div>
