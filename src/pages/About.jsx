@@ -25,25 +25,84 @@ export default function About() {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 648,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 648,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    // ],
+  };
+  const settings2 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 648,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    // ],
+  };
+
+  const settings3 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 648,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    // ],
   };
 
   return (
@@ -268,11 +327,12 @@ export default function About() {
           </ParallaxLayer>
 
           {/* Photo Gallery section */}
-          <ParallaxLayer offset={2} speed={1}>
+          <ParallaxLayer offset={2.1} speed={1}>
             <div className="animation_layer parallax" id="explore-section">
               <h1>My Photo Gallery</h1>
 
-              <div className={styles["carousel"]}>
+              {/* 3-PHOTO CAROUSEL */}
+              <div className={styles["carousel"]} id={styles["carousel-1"]}>
                 <div className={styles["carousel-inner"]}>
                   <Slider {...settings}>
                     {carousel_data.map((d) => (
@@ -290,6 +350,49 @@ export default function About() {
                   </Slider>
                 </div>
               </div>
+
+              {/* 2-PHOTO CAROUSEL */}
+              <div className={styles["carousel"]} id={styles["carousel-2"]}>
+                <div className={styles["carousel-inner"]}>
+                  <Slider {...settings2}>
+                    {carousel_data.map((d) => (
+                      <div key={d.img} className="carousel-card-container">
+                        <div className={styles["carousel-card"]}>
+                          <div className={styles["carousel-img-container"]}>
+                            <img src={d.img} alt="image"></img>
+                          </div>
+                          <div className={styles["carousel-caption-container"]}>
+                            <p>{d.caption}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
+
+              {/* 1-PHOTO CAROUSEL */}
+              <div className={styles["carousel"]} id={styles["carousel-3"]}>
+                <div className={styles["carousel-inner"]}>
+                  <Slider {...settings3}>
+                    {carousel_data.map((d) => (
+                      <div key={d.img} className="carousel-card-container">
+                        <div className={styles["carousel-card"]}>
+                          <div className={styles["carousel-img-container"]}>
+                            <img src={d.img} alt="image"></img>
+                          </div>
+                          <div className={styles["carousel-caption-container"]}>
+                            <p>{d.caption}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
+
+
+
             </div>
           </ParallaxLayer>
 
