@@ -9,6 +9,21 @@ import emailjs from "@emailjs/browser";
 import Typewriter from "typewriter-effect";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+import arrowDown from "../assets/icons/arrow-down.png";
+import bird from "../assets/home-parallax/bird.png";
+import cloud1 from "../assets/home-parallax/cloud-1.png";
+import cloud2 from "../assets/home-parallax/cloud-2.png";
+import cloud3 from "../assets/home-parallax/cloud-3.png";
+import grass0 from "../assets/home-parallax/grass-0.png";
+import grass1 from "../assets/home-parallax/grass-1.png";
+import grass2 from "../assets/home-parallax/grass-2.png";
+import grass3 from "../assets/home-parallax/grass-3.png";
+import grass4 from "../assets/home-parallax/grass-4.png";
+import flowerField from "../assets/home-parallax/flower-field.png";
+import myself1 from "../assets/myself-1.png";
+import linkedinIcon from "../assets/icons/Linkedin.png";
+import resumeIcon from "../assets/icons/external-link.png";
+
 export default function Home() {
   // contact form logic
   const form = useRef();
@@ -74,7 +89,7 @@ export default function Home() {
                     }}
                   />
                 </div>
-                <img src="/src/assets/icons/arrow-down.png" />
+                <img src={arrowDown} />
               </div>
             </div>
           </ParallaxLayer>
@@ -84,7 +99,7 @@ export default function Home() {
             <div className="animation_layer parallax" id="bird">
               <button onClick={click2_play}>
                 <img
-                  src="/src/assets/home-parallax/bird.png"
+                  src={bird}
                   className="parallax-bird"
                 />
               </button>
@@ -95,7 +110,7 @@ export default function Home() {
           <ParallaxLayer offset={0.15} speed={0.2}>
             <div className="animation_layer parallax" id="cloud-3">
               <img
-                src="/src/assets/home-parallax/cloud-3.png"
+                src={cloud3}
                 className="parallax-clouds"
               />
             </div>
@@ -103,7 +118,7 @@ export default function Home() {
           <ParallaxLayer offset={0.38} speed={0.4}>
             <div className="animation_layer parallax" id="cloud-2">
               <img
-                src="/src/assets/home-parallax/cloud-2.png"
+                src={cloud2}
                 className="parallax-clouds"
               />
             </div>
@@ -111,7 +126,7 @@ export default function Home() {
           <ParallaxLayer offset={0.43} speed={0.6}>
             <div className="animation_layer parallax" id="cloud-1">
               <img
-                src="/src/assets/home-parallax/cloud-1.png"
+                src={cloud1}
                 className="parallax-clouds"
               />
             </div>
@@ -119,7 +134,7 @@ export default function Home() {
           <ParallaxLayer offset={0.6} speed={0.6}>
             <div className="animation_layer parallax" id="cloud-1-2">
               <img
-                src="/src/assets/home-parallax/cloud-1.png"
+                src={cloud1}
                 className="parallax-clouds"
               />
             </div>
@@ -129,7 +144,7 @@ export default function Home() {
           <ParallaxLayer offset={1.07} speed={0.7}>
             <div className="animation_layer parallax" id="grass-4">
               <img
-                src="/src/assets/home-parallax/grass-4.png"
+                src={grass4}
                 className="parallax-grass"
               />
             </div>
@@ -137,7 +152,7 @@ export default function Home() {
           <ParallaxLayer offset={1.08} speed={0.8}>
             <div className="animation_layer parallax" id="grass-3">
               <img
-                src="/src/assets/home-parallax/grass-3.png"
+                src={grass3}
                 className="parallax-grass"
               />
             </div>
@@ -145,7 +160,7 @@ export default function Home() {
           <ParallaxLayer offset={1.0} speed={1.1}>
             <div className="animation_layer parallax" id="grass-2">
               <img
-                src="/src/assets/home-parallax/grass-2.png"
+                src={grass2}
                 className="parallax-grass"
               />
             </div>
@@ -153,7 +168,7 @@ export default function Home() {
           <ParallaxLayer offset={1.0} speed={1.3}>
             <div className="animation_layer parallax" id="grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -163,7 +178,7 @@ export default function Home() {
           <ParallaxLayer offset={2.1} speed={0.9}>
             <div className="animation_layer parallax" id="grass-0">
               <img
-                src="/src/assets/home-parallax/grass-0.png"
+                src={grass0}
                 className="parallax-grass"
               />
             </div>
@@ -173,7 +188,7 @@ export default function Home() {
           <ParallaxLayer offset={1.4} speed={1}>
             <div className="animation_layer parallax">
               <div className="myself-mobile">
-                <img src="/src/assets/myself-1.png" />
+                <img src={myself1} />
               </div>
               <div className="greeting-card">
                 <div className="greeting-box">
@@ -194,7 +209,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       onClick={click2_play}
                     >
-                      <img src="/src/assets/icons/Linkedin.png" />
+                      <img src={linkedinIcon} />
                       <span>Connect on LinkedIn!</span>
                     </a>
                     <a
@@ -204,12 +219,12 @@ export default function Home() {
                       rel="noopener noreferrer"
                       onClick={click2_play}
                     >
-                      <img src="/src/assets/icons/external-link.png" />
+                      <img src={resumeIcon} />
                       <span>View my Resume!</span>
                     </a>
                   </div>
                 </div>
-                <img className="myself-1" src="/src/assets/myself-1.png" />
+                <img className="myself-1" src={myself1} />
               </div>
             </div>
           </ParallaxLayer>
@@ -261,7 +276,7 @@ export default function Home() {
           {/* Contact section */}
           <ParallaxLayer offset={2.7} speed={0.9}>
             <div className="animation_layer parallax" id="flower-field">
-              <img src="/src/assets/home-parallax/flower-field.png" />
+              <img src={flowerField} />
             </div>
             <div className="animation_layer parallax" id="contact-section">
               <h1>Wanna get in touch?</h1>
