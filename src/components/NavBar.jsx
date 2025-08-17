@@ -6,6 +6,7 @@ import bossa from "../assets/sound/bossa.mp3";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 
+// image imports
 import musicIcon from "../assets/icons/music-icon.png";
 import linkedinIcon from "../assets/icons/linkedin-icon.png";
 import githubIcon from "../assets/icons/github-icon.png";

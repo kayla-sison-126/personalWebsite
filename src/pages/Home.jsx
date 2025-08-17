@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 import Typewriter from "typewriter-effect";
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+// image imports
 import arrowDown from "../assets/icons/arrow-down.png";
 import bird from "../assets/home-parallax/bird.png";
 import cloud1 from "../assets/home-parallax/cloud-1.png";

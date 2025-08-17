@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "../styles/Standard.css";
 import styles from "../styles/About.module.css";
@@ -9,6 +9,26 @@ import carousel_data from "../utils/photo-data.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// image imports
+import arrowDown from "../assets/icons/arrow-down.png";
+import myself1 from "../assets/myself-1.png";
+import myself3 from "../assets/myself-3.png";
+import grass0 from "../assets/home-parallax/grass-0.png";
+import grass1 from "../assets/home-parallax/grass-1.png";
+import grass2 from "../assets/home-parallax/grass-2.png";
+import cppLogo from "../assets/skill-logos/cpp-logo.png";
+import cLogo from "../assets/skill-logos/c-logo.png";
+import pythonLogo from "../assets/skill-logos/python-logo.png";
+import jsLogo from "../assets/skill-logos/js-logo.png";
+import reactLogo from "../assets/skill-logos/react-logo.png";
+import htmlLogo from "../assets/skill-logos/html-logo.png";
+import cssLogo from "../assets/skill-logos/css-logo.png";
+import gitLogo from "../assets/skill-logos/git-logo.png";
+import vscodeLogo from "../assets/skill-logos/vscode-logo.png";
+import figmaLogo from "../assets/skill-logos/figma-logo.png";
+import linkedinIcon from "../assets/icons/Linkedin.png";
+import externalLinkIcon from "../assets/icons/external-link.png";
 
 export default function About() {
   // sfx
@@ -95,7 +115,7 @@ export default function About() {
           <ParallaxLayer offset={0.18} speed={0.7}>
             <div className="animation_layer parallax" id="standard-grass-2">
               <img
-                src="/src/assets/home-parallax/grass-2.png"
+                src={grass2}
                 className="parallax-grass"
               />
             </div>
@@ -103,7 +123,7 @@ export default function About() {
           <ParallaxLayer offset={0.16} speed={1}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -114,7 +134,7 @@ export default function About() {
             <div className="animation_layer parallax">
               <div className="standard-header">
                 <h2 className="header-text">About</h2>
-                <img src="/src/assets/icons/arrow-down.png" />
+                <img src={arrowDown} />
               </div>
             </div>
           </ParallaxLayer>
@@ -123,7 +143,7 @@ export default function About() {
           <ParallaxLayer offset={2.3} speed={0.9}>
             <div className="animation_layer parallax" id="grass-0">
               <img
-                src="/src/assets/home-parallax/grass-0.png"
+                src={grass0}
                 className="parallax-grass"
               />
             </div>
@@ -133,7 +153,7 @@ export default function About() {
           <ParallaxLayer offset={0.9} speed={1}>
             <div className="animation_layer parallax">
               <div className={styles["myself-1-mobile"]}>
-                <img src="/src/assets/myself-1.png" />
+                <img src={myself1} />
               </div>
               <div className={styles["intro-card"]}>
                 <div className={styles["intro-box"]}>
@@ -169,7 +189,7 @@ export default function About() {
                       rel="noopener noreferrer"
                       onClick={click2_play}
                     >
-                      <img src="/src/assets/icons/Linkedin.png" />
+                      <img src={linkedinIcon} />
                       <span>Connect on LinkedIn!</span>
                     </a>
                     <a
@@ -179,14 +199,14 @@ export default function About() {
                       rel="noopener noreferrer"
                       onClick={click2_play}
                     >
-                      <img src="/src/assets/icons/external-link.png" />
+                      <img src={externalLinkIcon} />
                       <span>View my Resume!</span>
                     </a>
                   </div>
                 </div>
                 <img
                   className={styles["myself-1"]}
-                  src="/src/assets/myself-1.png"
+                  src={myself1}
                 />
               </div>
             </div>
@@ -196,54 +216,54 @@ export default function About() {
           <ParallaxLayer offset={1} speed={1}>
             <div className="animation_layer parallax">
               <div className={styles["myself-3-mobile"]}>
-                <img src="/src/assets/myself-3.png" />
+                <img src={myself3} />
               </div>
               <div className={styles["sta-card"]}>
                 <img
                   className={styles["myself-3"]}
-                  src="/src/assets/myself-3.png"
+                  src={myself3}
                 />
                 <div className={styles["sta-box"]}>
                   <h2>Technical Skills & Tools</h2>
                   <div className="button-section">
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/cpp-logo.png" />
+                      <img src={cppLogo} />
                       <span>C++</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/c-logo.png" />
+                      <img src={cLogo} />
                       <span>C</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/python-logo.png" />
+                      <img src={pythonLogo} />
                       <span>Python</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/js-logo.png" />
+                      <img src={jsLogo} />
                       <span>JavaScript</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/react-logo.png" />
+                      <img src={reactLogo} />
                       <span>React</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/html-logo.png" />
+                      <img src={htmlLogo} />
                       <span>HTML</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/css-logo.png" />
+                      <img src={cssLogo} />
                       <span>CSS</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/git-logo.png" />
+                      <img src={gitLogo} />
                       <span>Git/GitHub</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/vscode-logo.png" />
+                      <img src={vscodeLogo} />
                       <span>VS Code</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src="/src/assets/skill-logos/figma-logo.png" />
+                      <img src={figmaLogo} />
                       <span>Figma</span>
                     </div>
                   </div>
