@@ -46,7 +46,7 @@ export default function Blog() {
           </ParallaxLayer>
 
           {/* Intro Text */}
-          <ParallaxLayer offset={0.2} speed={1.5}>
+          <ParallaxLayer offset={0.25} speed={1.5}>
             <div className="animation_layer parallax">
               <div className="standard-header">
                 <h2 className="header-text">Blog</h2>

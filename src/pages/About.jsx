@@ -25,25 +25,6 @@ export default function About() {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 648,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       initialSlide: 2,
-    //     },
-    //   },
-    // ],
   };
   const settings2 = {
     dots: true,
@@ -54,25 +35,6 @@ export default function About() {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 648,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       initialSlide: 2,
-    //     },
-    //   },
-    // ],
   };
 
   const settings3 = {
@@ -84,26 +46,33 @@ export default function About() {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 648,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       initialSlide: 2,
-    //     },
-    //   },
-    // ],
   };
+
+  // carousel btn sfx
+  useEffect(() => {
+    const handleClick1 = () => {
+      click1_play();
+    };
+    const handleClick2 = () => {
+      click2_play();
+    };
+
+    const arrowButtons = document.querySelectorAll(".slick-arrow");
+    const dotButtons = document.querySelectorAll(".slick-dots button");
+
+    arrowButtons.forEach((btn) => btn.addEventListener("click", handleClick2));
+    dotButtons.forEach((btn) => btn.addEventListener("click", handleClick1));
+
+    // Cleanup on unmount
+    return () => {
+      arrowButtons.forEach((btn) =>
+        btn.removeEventListener("click", handleClick1)
+      );
+      dotButtons.forEach((btn) =>
+        btn.removeEventListener("click", handleClick2)
+      );
+    };
+  }, [click1_play]);
 
   return (
     <>
@@ -390,9 +359,6 @@ export default function About() {
                   </Slider>
                 </div>
               </div>
-
-
-
             </div>
           </ParallaxLayer>
 

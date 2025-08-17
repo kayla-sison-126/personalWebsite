@@ -1,7 +1,7 @@
 const carousel_data = [
   {
     img: "/carousel/t-shirt.JPG",
-    caption: "Computer Science T-Shirt Design Scholarship Winner!",
+    caption: "Computer Science T-Shirt Design Scholarship Winner",
   },
   {
     img: "/carousel/wics.jpg",
@@ -9,7 +9,7 @@ const carousel_data = [
   },
   {
     img: "/carousel/deans-list.jpg",
-    caption: "Photographed for UIC Engineering Dean's List!",
+    caption: "Photographed for Engineering Dean's List",
   },
   {
     img: "/carousel/launchpad.jpg",
@@ -17,7 +17,7 @@ const carousel_data = [
   },
   {
     img: "/carousel/sparkhacks.jpg",
-    caption: "My SparkHacks hackathon teammate and I",
+    caption: "My teammate and I at SparkHacks",
   },
   {
     img: "/carousel/innovation-center.jpg",
@@ -25,11 +25,11 @@ const carousel_data = [
   },
   {
     img: "/carousel/cafe.jpg",
-    caption: "I <3 cafe study sessions",
+    caption: "I <3 cafe study sessions!",
   },
   {
     img: "/carousel/music.jpg",
-    caption: "Performing at University of Chicago",
+    caption: "Performing at the University of Chicago",
   },
   {
     img: "/carousel/crochet.jpg",

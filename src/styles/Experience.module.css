@@ -1,0 +1,177 @@
+.intro-timeline-container {
+  display: flex;
+  justify-content: center;
+}
+
+.intro-timeline {
+  max-width: 900px;
+  margin-top: -80vh;
+  display: flex;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  gap: 10vw;
+}
+
+.intro-timeline-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.intro-timeline-right img {
+  transition: transform 0.3s ease;
+}
+
+.intro-timeline-right img:hover {
+  transform: scale(1.03);
+}
+
+.intro-timeline-left img {
+  transform: scaleX(-1);
+}
+
+.snake-timeline-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: visible;
+  margin: 0 auto;
+  height: 3000px;
+  margin-top: -65vh;
+}
+
+.snake-timeline-container h2 {
+  margin-top: 200px;
+  margin-left: 400px;
+  margin-right: 0;
+  width: 250px;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.snake-path-container {
+  display: flex;
+  justify-content: center;
+}
+
+.snake-path {
+  width: 100%;
+  overflow: visible;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  z-index: 0;
+}
+
+.timeline-event-right {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline-event-right p {
+  margin-right: -1000px;
+  margin-left: 20px;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
+.timeline-event-left {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline-event-left p {
+  text-align: right;
+  margin-left: -200px;
+  margin-right: 20px;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
+.timeline-event-container {
+  display: flex;
+  flex-direction: column;
+  gap: 330px;
+  margin: 0px;
+  margin-top: 300px;
+
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timeline-event, .flip-apple {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(-20deg);
+}
+
+.flip-apple {
+  transform: rotate(20deg);
+}
+.flip-apple:hover, .timeline-event:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fffdf7;
+  padding: 20px 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Josefin Sans", sans-serif;
+  color: #97c7d6;
+  border: 6px solid #f3e5b1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 4px;
+  right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #000;
+}

@@ -19,7 +19,8 @@
     "react-router-dom": "^7.7.0",
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
-    "typewriter-effect": "^2.22.0"
+    "typewriter-effect": "^2.22.0",
+    "use-sound": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
