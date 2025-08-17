@@ -6,6 +6,11 @@ import bossa from "../assets/sound/bossa.mp3";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 
+import musicIcon from "../assets/icons/music-icon.png";
+import linkedinIcon from "../assets/icons/linkedin-icon.png";
+import githubIcon from "../assets/icons/github-icon.png";
+import hamburgerIcon from "../assets/icons/hamburgerMenu.png";
+
 export default function NavBar() {
   // resize navbar for narrower layout
   const navCenterRef = useRef(null); // navigation links
@@ -85,7 +90,7 @@ export default function NavBar() {
               <li>
                 <button onClick={bgm_sound}>
                   <img
-                    src="/src/assets/icons/music-icon.png"
+                    src={musicIcon}
                     alt="Music"
                     className="navIcon"
                   />
@@ -98,7 +103,7 @@ export default function NavBar() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/src/assets/icons/linkedin-icon.png"
+                    src={linkedinIcon}
                     alt="LinkedIn"
                     className="navIcon"
                     onClick={click2_play}
@@ -112,7 +117,7 @@ export default function NavBar() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/src/assets/icons/github-icon.png"
+                    src={githubIcon}
                     alt="GitHub"
                     className="navIcon"
                     onClick={click2_play}
@@ -128,7 +133,7 @@ export default function NavBar() {
                 <div className="hamburger" ref={hamburgerRef}>
                   <button onClick={hamburgerClick}>
                     <img
-                      src="/src/assets/icons/hamburgerMenu.png"
+                      src={hamburgerIcon}
                       alt="Contact"
                       className="hamburgerIcon"
                       onClick={click2_play}
