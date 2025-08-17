@@ -5,6 +5,12 @@ import "../styles/Standard.css";
 // import click1 from "../assets/sound/button_click_1.mp3";
 // import click2 from "../assets/sound/button_click_2.mp3";
 
+// image imports
+import grass2 from "/src/assets/home-parallax/grass-2.png";
+import grass1 from "/src/assets/home-parallax/grass-1.png";
+import grass0 from "/src/assets/home-parallax/grass-0.png";
+import arrowDown from "/src/assets/icons/arrow-down.png";
+
 export default function Projects() {
   // sfx
   // const [click1_play] = useSound(click1);
@@ -31,7 +37,7 @@ export default function Projects() {
           <ParallaxLayer offset={0.18} speed={1.1}>
             <div className="animation_layer parallax" id="standard-grass-2">
               <img
-                src="/src/assets/home-parallax/grass-2.png"
+                src={grass2}
                 className="parallax-grass"
               />
             </div>
@@ -39,7 +45,7 @@ export default function Projects() {
           <ParallaxLayer offset={0.16} speed={1.3}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -50,7 +56,7 @@ export default function Projects() {
             <div className="animation_layer parallax">
               <div className="standard-header">
                 <h2 className="header-text">Projects</h2>
-                <img src="/src/assets/icons/arrow-down.png" />
+                <img src={arrowDown} />
               </div>
             </div>
           </ParallaxLayer>
@@ -59,7 +65,7 @@ export default function Projects() {
           <ParallaxLayer offset={2.3} speed={0.9}>
             <div className="animation_layer parallax" id="grass-0">
               <img
-                src="/src/assets/home-parallax/grass-0.png"
+                src={grass0}
                 className="parallax-grass"
               />
             </div>

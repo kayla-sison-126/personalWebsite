@@ -6,6 +6,14 @@ import useSound from "use-sound";
 import click1 from "../assets/sound/button_click_1.mp3";
 import click2 from "../assets/sound/button_click_2.mp3";
 
+// image imports
+import grass2 from "/src/assets/home-parallax/grass-2.png";
+import grass1 from "/src/assets/home-parallax/grass-1.png";
+import arrowDown from "/src/assets/icons/arrow-down.png";
+import myself1 from "/src/assets/myself-1.png";
+import sign from "/src/assets/sign.png";
+import apple from "/src/assets/apple.png";
+
 export default function Experience() {
   // sfx
   const [click1_play] = useSound(click1);
@@ -49,7 +57,7 @@ export default function Experience() {
           <ParallaxLayer offset={0.18} speed={1.1}>
             <div className="animation_layer parallax" id="standard-grass-2">
               <img
-                src="/src/assets/home-parallax/grass-2.png"
+                src={grass2}
                 className="parallax-grass"
               />
             </div>
@@ -57,7 +65,7 @@ export default function Experience() {
           <ParallaxLayer offset={3} speed={1.3}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -65,7 +73,7 @@ export default function Experience() {
           <ParallaxLayer offset={2} speed={1.3}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -73,7 +81,7 @@ export default function Experience() {
           <ParallaxLayer offset={1.9} speed={1.3}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -81,7 +89,7 @@ export default function Experience() {
           <ParallaxLayer offset={0.16} speed={1.3}>
             <div className="animation_layer parallax" id="standard-grass-1">
               <img
-                src="/src/assets/home-parallax/grass-1.png"
+                src={grass1}
                 className="parallax-grass"
               />
             </div>
@@ -92,7 +100,7 @@ export default function Experience() {
             <div className="animation_layer parallax">
               <div className="standard-header">
                 <h2 className="header-text">Experience</h2>
-                <img src="/src/assets/icons/arrow-down.png" />
+                <img src={arrowDown} />
               </div>
             </div>
           </ParallaxLayer>
@@ -105,7 +113,7 @@ export default function Experience() {
                   <div className={styles["intro-timeline-left"]}>
                     <h2>Click on the apples to read my story in detail!</h2>
                     <div className={styles["myself"]}>
-                      <img src="/src/assets/myself-1.png" />
+                      <img src={myself1} />
                     </div>
                   </div>
 
@@ -118,7 +126,7 @@ export default function Experience() {
                       rel="noopener noreferrer"
                       onClick={click2_play}
                     >
-                      <img src="/src/assets/sign.png" />
+                      <img src={sign} />
                     </a>
                   </div>
                 </div>
@@ -173,7 +181,7 @@ export default function Experience() {
                 <div className={styles["timeline-event-container"]}>
                   <div className={styles["timeline-event-right"]}>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
                       onClick={() => handleOpen("2019", "Started first job.")}
                     />
@@ -182,7 +190,7 @@ export default function Experience() {
                   <div className={styles["timeline-event-left"]}>
                     <p>- second year of uni</p>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles["timeline-event"]}
                       onClick={() =>
                         handleOpen("2020", "Created personal site.")
@@ -191,7 +199,7 @@ export default function Experience() {
                   </div>
                   <div className={styles["timeline-event-right"]}>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
                       // style={{ top: "930px" }}
                       onClick={() =>
@@ -203,7 +211,7 @@ export default function Experience() {
                   <div className={styles["timeline-event-left"]}>
                     <p>- second year of uni</p>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles["timeline-event"]}
                       // style={{ top: "1230px" }}
                       onClick={() =>
@@ -213,7 +221,7 @@ export default function Experience() {
                   </div>
                   <div className={styles["timeline-event-right"]}>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
                       // style={{ top: "1530px" }}
                       onClick={() =>
@@ -225,7 +233,7 @@ export default function Experience() {
                   <div className={styles["timeline-event-left"]}>
                     <p>- second year of uni</p>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles["timeline-event"]}
                       // style={{ top: "1830px" }}
                       onClick={() =>
@@ -235,7 +243,7 @@ export default function Experience() {
                   </div>
                   <div className={styles["timeline-event-right"]}>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
                       // style={{ top: "2130px" }}
                       onClick={() =>
@@ -247,7 +255,7 @@ export default function Experience() {
                   <div className={styles["timeline-event-left"]}>
                     <p>- second year of uni</p>
                     <img
-                      src="/src/assets/apple.png"
+                      src={apple}
                       className={styles["timeline-event"]}
                       onClick={() =>
                         handleOpen("2018", "Graduated from university.")

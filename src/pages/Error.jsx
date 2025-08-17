@@ -4,6 +4,11 @@ import styles from "../styles/Error.module.css";
 import useSound from "use-sound";
 import click1 from "../assets/sound/button_click_1.mp3";
 
+// image imports
+import grassBg from "/grass-bg.png";
+import grass0 from "/src/assets/home-parallax/grass-0.png";
+import myself2 from "../assets/myself-2.png";
+
 export default function Error() {
   const [click1_play] = useSound(click1);
   return (
@@ -21,7 +26,7 @@ export default function Error() {
               style={{ height: "300vh" }}>
                 <div className={styles["grass-bg"]}>
               <img
-                src="/grass-bg.png"
+                src={grassBg}
                 className={styles["grass-bg-img"]}
               />
 
@@ -34,7 +39,7 @@ export default function Error() {
           <ParallaxLayer offset={0.7} speed={0.9}>
             <div className="animation_layer parallax {styles['grass-0']}">
               <img
-                src="/src/assets/home-parallax/grass-0.png"
+                src={grass0}
                 className={styles["grass-0-img"]}
               />
             </div>
@@ -58,7 +63,7 @@ export default function Error() {
                     <h3>Back to Home</h3>
                   </Link>
                 </div>
-                <img className={styles["myself-2"]} src="/src/assets/myself-2.png" />
+                <img className={styles["myself-2"]} src={myself2} />
               </div>
             </div>
           </ParallaxLayer>
