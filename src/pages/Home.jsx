@@ -215,7 +215,7 @@ export default function Home() {
                     </a>
                     <a
                       className="button-1"
-                      href="KaylaSison_resume_7-28-25.pdf"
+                      href="resume_8_13_25.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={click2_play}

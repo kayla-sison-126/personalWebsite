@@ -121,7 +121,7 @@ export default function Experience() {
                     <h2>. . . or click on the sign to view my resume!</h2>
                     <a
                       // className="sign-button"
-                      href="KaylaSison_resume_7-28-25.pdf"
+                      href="resume_8_13_25.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={click2_play}

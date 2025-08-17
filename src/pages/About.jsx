@@ -27,6 +27,11 @@ import cssLogo from "../assets/skill-logos/css-logo.png";
 import gitLogo from "../assets/skill-logos/git-logo.png";
 import vscodeLogo from "../assets/skill-logos/vscode-logo.png";
 import figmaLogo from "../assets/skill-logos/figma-logo.png";
+import flaskLogo from "../assets/skill-logos/flask-logo.png";
+import awsLogo from "../assets/skill-logos/aws-logo.png";
+import postmanLogo from "../assets/skill-logos/postman-logo.png";
+import supabaseLogo from "../assets/skill-logos/supabase-logo.png";
+import jiraLogo from "../assets/skill-logos/supabase-logo.png";
 import linkedinIcon from "../assets/icons/Linkedin.png";
 import externalLinkIcon from "../assets/icons/external-link.png";
 
@@ -194,7 +199,7 @@ export default function About() {
                     </a>
                     <a
                       className="button-1"
-                      href="KaylaSison_resume_7-28-25.pdf"
+                      href="resume_8_13_25.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={click2_play}
@@ -243,16 +248,32 @@ export default function About() {
                       <span>JavaScript</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src={reactLogo} />
-                      <span>React</span>
-                    </div>
-                    <div className={styles["skill-tag"]}>
                       <img src={htmlLogo} />
                       <span>HTML</span>
                     </div>
                     <div className={styles["skill-tag"]}>
                       <img src={cssLogo} />
                       <span>CSS</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={reactLogo} />
+                      <span>React</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={flaskLogo} />
+                      <span>Flask</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={awsLogo} />
+                      <span>AWS (Lambda, EC2)</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={supabaseLogo} />
+                      <span>Supabase</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={postmanLogo} />
+                      <span>Postman</span>
                     </div>
                     <div className={styles["skill-tag"]}>
                       <img src={gitLogo} />
@@ -266,13 +287,17 @@ export default function About() {
                       <img src={figmaLogo} />
                       <span>Figma</span>
                     </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={jiraLogo} />
+                      <span>Jira</span>
+                    </div>
                   </div>
 
                   <h2>Notable Achievements</h2>
                   <div className={styles["achievements"]}>
                     <ul>
                       <li>Cumulative GPA: 4.0/4.0</li>
-                      <li>Dean's List 2023 -- 2024</li>
+                      <li>Dean's List 2023 - 2025</li>
                       <li>
                         Capital One Launchpad: Legacy & Leadership Program (July
                         2025) -- more info{" "}
@@ -287,7 +312,16 @@ export default function About() {
                       </li>
                       <li>
                         AbbVie Business Technology Solutions Externship Program
-                        (August 2025)
+                        (August 2025) -- more
+                        info{" "}
+                        <a
+                          href="https://www.linkedin.com/posts/kayla-sison126_abbvielife-externship-businesstechnology-activity-7361826933917077505-vADP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEa4x18BptVXGB4kCpG9QoaX_OhjCqAHuSs"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles["achievement-link"]}
+                        >
+                          here
+                        </a>
                       </li>
                       <li>
                         Women in Engineering Project Dean's Merit Scholarship
