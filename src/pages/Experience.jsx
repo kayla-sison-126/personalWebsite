@@ -19,6 +19,61 @@ export default function Experience() {
   const [click1_play] = useSound(click1);
   const [click2_play] = useSound(click2);
 
+  // modal content
+  const titles = [
+    // 0
+    "2023 - Starting my Undergrad at University of Illinois Chicago"
+    ,
+    // 1
+    "2023 - Early Leadership for Art Collective"
+    ,
+    // 2
+    "2024 - Innovation Intern at OSF HealthCare"
+    ,
+    // 3
+    "2024 - Executive Board for Women in Computer Science"
+    ,
+    // 4
+    "2024 - Web Development Courses with CodePath"
+    ,
+    // 5
+    "2025 - Web Developer for Dulce Tentaciones"
+    ,
+    // 6
+    "2025 - Capital One & AbbVie Summer Programs"
+    ,
+    // 7
+    "2025 - Transferring to the University of Illinois at Urbana Champaign"
+    ,
+  ]
+
+  const text = [
+    // 0
+    "I began my undergraduate journey in Fall 2023 at the University of Illinois Chicago (UIC), majoring in Computer Science. During my time at UIC, I maintained a 4.0 GPA and was recognized on the Dean's List throughout 2023 and 2024. The two years I spent at UIC allowed me to explore both technical coursework and creative interests while laying the groundwork for future opportunities in tech and design."
+    ,
+    // 1
+    "Outside of academics, I broke into a leadership role early by joining Art Collective at UIC as their Graphic Designer during my freshman year. As part of the Executive Board, I led the club's social media presence, managing an Instagram account and designing 20+ promotional graphics and event flyers, combining creative direction with accessibility and visual impact. My role also involved close collaboration with other board members and club participants, ensuring clear communication and cohesive branding across all club initiatives."
+    ,
+    // 2
+    "In May 2024, I interned at OSF HealthCare as part of the Break Through Tech Sprinternship Program. I worked in a team to conceptualize and design a clinic feedback web application focused on surveying patient experience and displaying feedback data to the company. My role involved UI/UX design using Figma and Canva, creating user journey maps, and prototyping interactive features for both patients and clinic staff by creating engaging feedback methods and compelling data visualizations."
+    ,
+    // 3
+    "In the summer of 2024, I became an Executive Board member of Women in Computer Science (WiCS), serving as UI Designer and Outreach Officer. Throughout my time with WiCS, I redesigned the organization's website, hosted a hands-on UI/UX workshop, and managed content across social platforms, boosting community engagement and increasing our Instagram following by 18%. I highly enjoyed supporting the organization's mission, which is to support women pursuing a career in technology, and although I am no longer an Executive Board member, I still interact with WiCS as much as I can, and have plans to become a mentor in their mentorship program."
+    ,
+    // 4
+    "To strengthen my technical foundation, I completed CodePath's Web Development 101 and 102 courses during my sophomore year. These intensive semester-long programs introduced me to full-stack development with a focus on HTML, CSS, JavaScript, and React. WEB 102 also introduced me to Supabase and API integration. These courses provided a weekly project-based experience and reinforced best practices in building responsive, modern web applications."
+    ,
+    // 5
+    "In the summer of 2025, I co-founded and built a website for Dulce Tentaciones, a local small bakery business. Working in a team of three, we developed the site from scratch using React. My main goal was business solutions, which included implementing a mailing list with Brevo's RESTful API and integrating a Sanity CMS for simple content updates, so that non-developers can update menu items with ease. I also designed custom email templates and automation workflows for improved customer engagement."
+    ,
+    // 6
+    "In Summer 2025, I was selected for two competitive programs which highly deepened my experience in business strategy, product thinking, and enterprise technology. As a scholar in the Capital One Launchpad: Legacy & Leadership Program, I collaborated with a multidisciplinary team to tackle a case study comparing $10K vs. $20K credit line strategies. I contributed a user profile, journey map, and product mock-up, and I led the design of our final slide deck, which we presented to Capital One senior leaders during our capstone presentation. In August, I participated in the AbbVie Business Technology Solutions Externship, where I worked on a cross-functional team to address a business-technology challenge, explored key enterprise functions, and connected with professionals across departments. Both experiences enhanced my skills in critical thinking, communication, and problem-solving at the intersection of tech, business, and design."
+    ,
+    // 7
+    "In Fall 2025, I transferred to the University of Illinois Urbana-Champaign to pursue a B.S. in Computer Science and Statistics. I made this decision to challenge myself in a more competitive academic environment and to gain access to one of the top-ranked computer science programs in the country. UIUC's rigorous curriculum, research opportunities, and strong tech community aligned with my goals for both personal growth and long-term career development."
+    ,
+  ]
+
   // modal/pop-up
   const [modalOpen, setModalOpen] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
@@ -111,7 +166,7 @@ export default function Experience() {
               <div className={styles["intro-timeline-container"]}>
                 <div className={styles["intro-timeline"]}>
                   <div className={styles["intro-timeline-left"]}>
-                    <h2>Click on the apples to read my story in detail!</h2>
+                    <h2>Click the apples on the path to read my story in detail!</h2>
                     <div className={styles["myself"]}>
                       <img src={myself1} />
                     </div>
@@ -183,17 +238,17 @@ export default function Experience() {
                     <img
                       src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() => handleOpen("2019", "Started first job.")}
+                      onClick={() => handleOpen(titles[0], text[0])}
                     />
-                    <p>- first year of uni</p>
+                    <p>{titles[0]}</p>
                   </div>
                   <div className={styles["timeline-event-left"]}>
-                    <p>- second year of uni</p>
+                    <p>{titles[1]}</p>
                     <img
                       src={apple}
                       className={styles["timeline-event"]}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[1], text[1])
                       }
                     />
                   </div>
@@ -201,21 +256,19 @@ export default function Experience() {
                     <img
                       src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
-                      // style={{ top: "930px" }}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[2], text[2])
                       }
                     />
-                    <p>- first year of uni</p>
+                    <p>{titles[2]}</p>
                   </div>
                   <div className={styles["timeline-event-left"]}>
-                    <p>- second year of uni</p>
+                    <p>{titles[3]}</p>
                     <img
                       src={apple}
                       className={styles["timeline-event"]}
-                      // style={{ top: "1230px" }}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[3], text[3])
                       }
                     />
                   </div>
@@ -223,21 +276,19 @@ export default function Experience() {
                     <img
                       src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
-                      // style={{ top: "1530px" }}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[4], text[4])
                       }
                     />
-                    <p>- first year of uni</p>
+                    <p>{titles[4]}</p>
                   </div>
                   <div className={styles["timeline-event-left"]}>
-                    <p>- second year of uni</p>
+                    <p>{titles[5]}</p>
                     <img
                       src={apple}
                       className={styles["timeline-event"]}
-                      // style={{ top: "1830px" }}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[5], text[5])
                       }
                     />
                   </div>
@@ -245,20 +296,19 @@ export default function Experience() {
                     <img
                       src={apple}
                       className={styles[("timeline-event", "flip-apple")]}
-                      // style={{ top: "2130px" }}
                       onClick={() =>
-                        handleOpen("2020", "Created personal site.")
+                        handleOpen(titles[6], text[6])
                       }
                     />
-                    <p>- first year of uni</p>
+                    <p>{titles[6]}</p>
                   </div>
                   <div className={styles["timeline-event-left"]}>
-                    <p>- second year of uni</p>
+                    <p>{titles[7]}</p>
                     <img
                       src={apple}
                       className={styles["timeline-event"]}
                       onClick={() =>
-                        handleOpen("2018", "Graduated from university.")
+                        handleOpen(titles[7], text[7])
                       }
                     />
                   </div>
