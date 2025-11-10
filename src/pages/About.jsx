@@ -31,7 +31,7 @@ import flaskLogo from "../assets/skill-logos/flask-logo.png";
 import awsLogo from "../assets/skill-logos/aws-logo.png";
 import postmanLogo from "../assets/skill-logos/postman-logo.png";
 import supabaseLogo from "../assets/skill-logos/supabase-logo.png";
-import jiraLogo from "../assets/skill-logos/supabase-logo.png";
+import jiraLogo from "../assets/skill-logos/jira-logo.png";
 import linkedinIcon from "../assets/icons/Linkedin.png";
 import externalLinkIcon from "../assets/icons/external-link.png";
 
