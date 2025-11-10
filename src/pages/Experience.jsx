@@ -45,6 +45,9 @@ export default function Experience() {
     // 7
     "2025 - Transferring to the University of Illinois at Urbana Champaign"
     ,
+    // 8
+    "2025 - WiCS Mentorship"
+    ,
   ]
 
   const text = [
@@ -72,6 +75,9 @@ export default function Experience() {
     // 7
     "In Fall 2025, I transferred to the University of Illinois Urbana-Champaign to pursue a B.S. in Computer Science and Statistics. I made this decision to challenge myself in a more competitive academic environment and to gain access to one of the top-ranked computer science programs in the country. UIUC's rigorous curriculum, research opportunities, and strong tech community aligned with my goals for both personal growth and long-term career development."
     ,
+    // 8
+    "I became a mentor for Women in Computer Science in September 2025. I coach my mentee by providing resume reviews and career resources, as well as hosting mentorship meetings bi-weekly. Currently, I am coaching my mentee through a fullstack project alongside another mentor-mentee pairing. The project uses Django and React, and will ultimately be a gamified messaging website."
+    ,
   ]
 
   // modal/pop-up
@@ -96,7 +102,7 @@ export default function Experience() {
       <div className="parallax-container">
         <Parallax
           className="animation"
-          pages={5}
+          pages={5.2}
           style={{ top: "0", left: "0" }}
         >
           {/* Sky BG */}
@@ -224,7 +230,7 @@ export default function Experience() {
                         C150,4000 50,4100 100,4200
                         C150,4300 50,4400 100,4500
                         C150,4600 50,4700 100,4800
-                        // C150,4900 50,5000 100,5100
+                        C150,4900 50,5000 100,5100
                       "
                       stroke="#F3E5B1"
                       fill="transparent"
@@ -312,15 +318,25 @@ export default function Experience() {
                       }
                     />
                   </div>
+                  <div className={styles["timeline-event-right"]}>
+                    <img
+                      src={apple}
+                      className={styles[("timeline-event", "flip-apple")]}
+                      onClick={() =>
+                        handleOpen(titles[8], text[8])
+                      }
+                    />
+                    <p>{titles[8]}</p>
+                  </div>
                 </div>
 
-                <h2>. . . and many more apples to come!</h2>
+                <h2 className={styles["timeline-footer"]}>. . . and many more apples to come!</h2>
               </div>
             </div>
           </ParallaxLayer>
 
           {/* Footer */}
-          <ParallaxLayer offset={4.6} speed={0.5} style={{ zIndex: 10 }}>
+          <ParallaxLayer offset={4.9} speed={0.5} style={{ zIndex: 10 }}>
             <div className="custom-footer">
               <div className="footer-wave">
                 <svg viewBox="0 0 1440 150" preserveAspectRatio="none">

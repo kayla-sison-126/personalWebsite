@@ -133,6 +133,10 @@
   transform: scale(1.05);
 }
 
+.timeline-footer {
+  margin-top: -50px;
+}
+
 /* Modal */
 .modal {
   position: fixed;
