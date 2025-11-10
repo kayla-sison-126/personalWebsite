@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
@@ -32,7 +31,6 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      {/* <Footer /> */}
       </ClickSpark>
     </BrowserRouter>
   );

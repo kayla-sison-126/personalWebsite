@@ -54,7 +54,7 @@
     padding: 10px;
     padding-left: 40px;
     font-family: 'Josefin Sans', sans-serif;
-    color: #97C7D6;
+    color: #74a8b7;
     font-weight: 350;
     padding-top: 16px;
 }
@@ -87,10 +87,11 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 15px;
+  margin-top: 12px;
 }
 
 .button-1 {
-  background-color: #97c7d6;
+  background-color: #89b3c0;
   color: #fffdf7;
   border-radius: 999px;
   font-family: "Josefin Sans", sans-serif;
@@ -101,9 +102,11 @@
   padding-left: 10px;
   padding-right: 16px;
   padding-top: 4px;
+  padding-bottom: 1px;
   transition: transform 0.2s ease, opacity 0.2s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .button-1 img {
@@ -382,7 +385,7 @@
 .selection-button {
   background-color: #fffdf7;
   text-decoration: none;
-  color: #97c7d6;
+  color: #74a8b7;
   width: 160px;
   padding: 20px;
   text-align: center;
@@ -444,7 +447,7 @@
 .contact-input,
 .contact-textarea {
   background-color: #fffdf7;
-  color: #97c7d6;
+  color: #74a8b7;
   border: 4px solid #f3e5b1;
   border-radius: 20px;
   font-family: "Josefin Sans", sans-serif;
@@ -469,7 +472,7 @@
 }
 
 #submit-btn {
-  background-color: #97c7d6;
+  background-color: #89b3c0;
   color: #fffdf7;
   border-radius: 999px;
   font-family: "Josefin Sans", sans-serif;

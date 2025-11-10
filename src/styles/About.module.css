@@ -27,7 +27,7 @@
   padding-left: 40px;
   padding-right: 30px;
   font-family: "Josefin Sans", sans-serif;
-  color: #97c7d6;
+  color: #74a8b7;
   font-weight: 350;
 }
 
@@ -132,7 +132,7 @@
   padding-bottom: 0px;
   padding-left: 40px;
   font-family: "Josefin Sans", sans-serif;
-  color: #97c7d6;
+  color: #74a8b7;
   font-weight: 350;
   position: absolute;
   width: 600px;
@@ -169,7 +169,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: #97c7d6;
+  color: #74a8b7;
 }
 
 .achievement-link {
@@ -265,7 +265,7 @@
 }
 
 .carousel-caption-container p {
-  color: #97c7d6;
+  color: #74a8b7;
   padding-top: 10px;
   margin-left: 10px;
   margin-right: 10px;

@@ -201,6 +201,7 @@ export default function Home() {
                     <br />
                     My tech interests include software engineering, web
                     development, and UI/UX design.
+                    <br />
                   </p>
                   <div className="button-section">
                     <a
