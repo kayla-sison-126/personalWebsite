@@ -85,7 +85,7 @@ export default function Error() {
                 <a href="https://github.com/kayla-sison-126">GitHub</a>
               </div>
               <br />
-              <p>© 2025 Kayla Sison</p>
+              <p>© Kayla Sison</p>
             </div>
           </ParallaxLayer>
         </Parallax>

@@ -19,6 +19,7 @@ import grass1 from "../assets/home-parallax/grass-1.png";
 import grass2 from "../assets/home-parallax/grass-2.png";
 import cppLogo from "../assets/skill-logos/cpp-logo.png";
 import cLogo from "../assets/skill-logos/c-logo.png";
+import rLogo from "../assets/skill-logos/r-logo.png";
 import pythonLogo from "../assets/skill-logos/python-logo.png";
 import jsLogo from "../assets/skill-logos/js-logo.png";
 import reactLogo from "../assets/skill-logos/react-logo.png";
@@ -30,6 +31,8 @@ import figmaLogo from "../assets/skill-logos/figma-logo.png";
 import flaskLogo from "../assets/skill-logos/flask-logo.png";
 import awsLogo from "../assets/skill-logos/aws-logo.png";
 import postmanLogo from "../assets/skill-logos/postman-logo.png";
+import claudeLogo from "../assets/skill-logos/claude-logo.svg";
+import tsLogo from "../assets/skill-logos/typescript-logo.png";
 import supabaseLogo from "../assets/skill-logos/supabase-logo.png";
 import jiraLogo from "../assets/skill-logos/jira-logo.png";
 import linkedinIcon from "../assets/icons/Linkedin.png";
@@ -199,7 +202,7 @@ export default function About() {
                     </a>
                     <a
                       className="button-1"
-                      href="resume_8_13_25.pdf"
+                      href="resume.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={click2_play}
@@ -232,20 +235,8 @@ export default function About() {
                   <h2>Technical Skills & Tools</h2>
                   <div className="button-section">
                     <div className={styles["skill-tag"]}>
-                      <img src={cppLogo} />
-                      <span>C++</span>
-                    </div>
-                    <div className={styles["skill-tag"]}>
-                      <img src={cLogo} />
-                      <span>C</span>
-                    </div>
-                    <div className={styles["skill-tag"]}>
-                      <img src={pythonLogo} />
-                      <span>Python</span>
-                    </div>
-                    <div className={styles["skill-tag"]}>
-                      <img src={jsLogo} />
-                      <span>JavaScript</span>
+                      <img src={reactLogo} />
+                      <span>React</span>
                     </div>
                     <div className={styles["skill-tag"]}>
                       <img src={htmlLogo} />
@@ -256,28 +247,44 @@ export default function About() {
                       <span>CSS</span>
                     </div>
                     <div className={styles["skill-tag"]}>
+                      <img src={jsLogo} />
+                      <span>JavaScript</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={tsLogo} />
+                      <span>TypeScript</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
                       <img src={reactLogo} />
-                      <span>React</span>
+                      <span>React Native</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src={flaskLogo} />
-                      <span>Flask</span>
+                      <img src={pythonLogo} />
+                      <span>Python</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src={awsLogo} />
-                      <span>AWS (Lambda, EC2)</span>
+                      <img src={cppLogo} />
+                      <span>C++</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={cLogo} />
+                      <span>C</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={rLogo} />
+                      <span>R</span>
                     </div>
                     <div className={styles["skill-tag"]}>
                       <img src={supabaseLogo} />
                       <span>Supabase</span>
                     </div>
                     <div className={styles["skill-tag"]}>
-                      <img src={postmanLogo} />
-                      <span>Postman</span>
-                    </div>
-                    <div className={styles["skill-tag"]}>
                       <img src={gitLogo} />
                       <span>Git/GitHub</span>
+                    </div>
+                    <div className={styles["skill-tag"]}>
+                      <img src={claudeLogo} />
+                      <span>Claude Code</span>
                     </div>
                     <div className={styles["skill-tag"]}>
                       <img src={vscodeLogo} />
@@ -296,8 +303,7 @@ export default function About() {
                   <h2>Notable Achievements</h2>
                   <div className={styles["achievements"]}>
                     <ul>
-                      <li>Cumulative GPA: 4.0/4.0</li>
-                      <li>Dean's List 2023 - 2025</li>
+                      <li>Cumulative GPA: 3.8/4.0</li>
                       <li>
                         Capital One Launchpad: Legacy & Leadership Program (July
                         2025) -- more info{" "}
@@ -324,7 +330,14 @@ export default function About() {
                         </a>
                       </li>
                       <li>
-                        Women in Engineering Project Dean's Merit Scholarship
+                        Featured on back page of RISE: UIC College of
+                        Engineering Magazine (Fall 2024)
+                      </li>
+                      <li>
+                        Women in Engineering Project Dean's Merit Scholarship - $30,000
+                      </li>
+                      <li>
+                        Advocate Health Scholarship - $5,000
                       </li>
                       <li>
                         UIC Computer Science T-Shirt Design Scholarship -- more
@@ -337,10 +350,6 @@ export default function About() {
                         >
                           here
                         </a>
-                      </li>
-                      <li>
-                        Featured on back page of RISE: UIC College of
-                        Engineering Magazine (Fall 2024)
                       </li>
                     </ul>
                   </div>
@@ -433,7 +442,7 @@ export default function About() {
                 <a href="https://github.com/kayla-sison-126">GitHub</a>
               </div>
               <br />
-              <p>© 2025 Kayla Sison</p>
+              <p>© Kayla Sison</p>
             </div>
           </ParallaxLayer>
         </Parallax>

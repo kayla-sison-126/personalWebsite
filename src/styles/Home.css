@@ -200,7 +200,7 @@
 /* parallax components ---------------------------------*/
 #sky-bg {
   background-color: #a6eaff;
-  background-image: linear-gradient(180deg, #a6eaff 0%, #e3f7fe 100%);
+  background-image: linear-gradient(180deg, #8be4ff 0%, #e3f7fe 100%);
 }
 
 #bird {

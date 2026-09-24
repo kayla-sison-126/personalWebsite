@@ -89,12 +89,11 @@ export default function NavBar() {
           <div className="icons">
             <ul>
               <li>
-                <button onClick={bgm_sound}>
-                  <img
-                    src={musicIcon}
-                    alt="Music"
-                    className="navIcon"
-                  />
+                <button
+                  onClick={bgm_sound}
+                  title="Toggle some tunes while you browse!"
+                >
+                  <img src={musicIcon} alt="Music" className="navIcon" />
                 </button>
               </li>
               <li>
@@ -107,6 +106,7 @@ export default function NavBar() {
                     src={linkedinIcon}
                     alt="LinkedIn"
                     className="navIcon"
+                    title="Connect with me on LinkedIn!"
                     onClick={click2_play}
                   />
                 </a>
@@ -121,6 +121,7 @@ export default function NavBar() {
                     src={githubIcon}
                     alt="GitHub"
                     className="navIcon"
+                    title="Check out my GitHub!"
                     onClick={click2_play}
                   />
                 </a>
@@ -150,21 +151,37 @@ export default function NavBar() {
         <div className="nav-center-relative">
           <div className="nav-center-wrapper" ref={navCenterRef}>
             <nav>
-              <Link to="/" onClick={click1_play} style={{ paddingLeft: "30px" }}>
+              <Link
+                to="/"
+                onClick={click1_play}
+                style={{ paddingLeft: "30px" }}
+              >
                 home
               </Link>
-              <Link to="/about" onClick={click1_play} style={{ paddingLeft: "30px" }}>
+              <Link
+                to="/about"
+                onClick={click1_play}
+                style={{ paddingLeft: "30px" }}
+              >
                 about
               </Link>
-              <Link to="/experience" onClick={click1_play} style={{ paddingLeft: "30px", paddingRight: "30px"}}>
+              <Link
+                to="/experience"
+                onClick={click1_play}
+                style={{ paddingLeft: "30px", paddingRight: "30px" }}
+              >
                 experience
               </Link>
-              <Link to="/projects" onClick={click1_play} style={{ paddingRight: "30px"}}>
+              <Link
+                to="/projects"
+                onClick={click1_play}
+                style={{ paddingRight: "30px" }}
+              >
                 projects
               </Link>
-              <Link to="/blog" onClick={click1_play} style={{ paddingRight: "30px"}}>
+              {/* <Link to="/blog" onClick={click1_play} style={{ paddingRight: "30px"}}>
                 blog
-              </Link>
+              </Link> */}
             </nav>
           </div>
         </div>

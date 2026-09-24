@@ -216,7 +216,7 @@ export default function Home() {
                     </a>
                     <a
                       className="button-1"
-                      href="resume_8_13_25.pdf"
+                      href="resume.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={click2_play}
@@ -262,14 +262,14 @@ export default function Home() {
                     <h3>Projects</h3>
                     <p>Take a look at my best work</p>
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/blog"
                     className="selection-button"
                     onClick={click1_play}
                   >
                     <h3>Blog</h3>
                     <p>Read what's been on my mind lately</p>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -281,7 +281,7 @@ export default function Home() {
               <img src={flowerField} />
             </div>
             <div className="animation_layer parallax" id="contact-section">
-              <h1>Wanna get in touch?</h1>
+              <h1>Want to get in touch?</h1>
               <p>Drop a message for me!</p>
               <form id="contact-form" ref={form} onSubmit={sendEmail}>
                 <input
@@ -334,7 +334,7 @@ export default function Home() {
                 <a href="https://github.com/kayla-sison-126">GitHub</a>
               </div>
               <br />
-              <p>© 2025 Kayla Sison</p>
+              <p>© Kayla Sison</p>
             </div>
           </ParallaxLayer>
         </Parallax>

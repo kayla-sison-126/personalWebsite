@@ -4,137 +4,190 @@
 }
 
 .intro-timeline {
-  max-width: 900px;
+  max-width: 480px;
   margin-top: -80vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   color: #f3e5b1;
   font-family: "Josefin Sans", sans-serif;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  gap: 10vw;
+  gap: 18px;
 }
 
-.intro-timeline-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
+.intro-heading {
+  margin: 0;
 }
 
-.intro-timeline-right img {
+.intro-character img {
+  width: 45vw;
+  max-width: 260px;
   transition: transform 0.3s ease;
 }
 
-.intro-timeline-right img:hover {
+.intro-character img:hover {
   transform: scale(1.03);
 }
 
-.intro-timeline-left img {
-  transform: scaleX(-1);
+/* Hints that the trunk/timeline continues below, tying the hero into
+   the timeline section instead of leaving it feeling disconnected. */
+.intro-trunk-stub {
+  display: block;
+  width: 8px;
+  height: 70px;
+  background: linear-gradient(180deg, #f3e5b1, #e3cf8f);
+  border-radius: 4px;
 }
 
-.snake-timeline-container {
-  position: relative;
+.resume-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-cta:hover {
+  transform: scale(1.03);
+}
+
+.resume-cta img {
+  width: 64px;
+}
+
+.timeline-section {
   width: 100%;
   max-width: 600px;
-  overflow: visible;
   margin: 0 auto;
-  height: 3000px;
   margin-top: -65vh;
 }
 
-.snake-timeline-container h2 {
-  margin-top: 200px;
-  margin-left: 400px;
-  margin-right: 0;
-  width: 250px;
-  color: #f3e5b1;
-  font-family: "Josefin Sans", sans-serif;
+/* Trunk + rows share one grid cell so the trunk always stretches to
+   match the rows' real height — no more guessing a pixel value that
+   falls short as entries are added. */
+.timeline-stack {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.snake-path-container {
-  display: flex;
-  justify-content: center;
-}
-
-.snake-path {
-  width: 100%;
-  overflow: visible;
-  position: absolute;
-  width: 200px;
-  height: 100%;
+.timeline-trunk {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  width: 10px;
+  background: linear-gradient(180deg, #f3e5b1, #e3cf8f);
+  border-radius: 6px;
   z-index: 0;
 }
 
-.timeline-event-right {
-  width: 100px;
-  height: 100px;
-  left: 50%;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.timeline-event-right p {
-  margin-right: -1000px;
-  margin-left: 20px;
-  width: 200px;
-  color: #f3e5b1;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.1rem;
-}
-
-.timeline-event-left {
-  width: 100px;
-  height: 100px;
-  left: 50%;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.timeline-event-left p {
-  text-align: right;
-  margin-left: -200px;
-  margin-right: 20px;
-  color: #f3e5b1;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.1rem;
-}
-
-.timeline-event-container {
+.timeline-rows {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 330px;
-  margin: 0px;
+  margin: 0;
   margin-top: 300px;
+}
 
+.timeline-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+}
+
+.row-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.row-right .row-content {
+  grid-column: 2;
+  justify-self: start;
+  padding-left: 34px;
+}
+
+.row-left .row-content {
+  grid-column: 1;
+  justify-self: end;
+  padding-right: 34px;
+}
+
+/* Short branch connecting the apple back to the trunk */
+.apple-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
   z-index: 2;
 }
 
-.timeline-event, .flip-apple {
+.apple-wrap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 6px;
+  background: #f3e5b1;
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+
+.row-right .apple-wrap::before {
+  right: 100%;
+}
+
+.row-left .apple-wrap::before {
+  left: 100%;
+}
+
+.timeline-text {
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  max-width: 220px;
+}
+
+.row-right .timeline-text {
+  text-align: left;
+}
+
+.row-left .timeline-text {
+  text-align: right;
+}
+
+.timeline-apple {
+  display: block;
   width: 100px;
   height: 100px;
-  left: 50%;
-  z-index: 2;
   cursor: pointer;
   transition: transform 0.3s ease;
-  transform: rotate(-20deg);
 }
 
-.flip-apple {
-  transform: rotate(20deg);
+.apple-tilt-right {
+  transform: rotate(14deg);
 }
-.flip-apple:hover, .timeline-event:hover {
-  transform: scale(1.05);
+
+.apple-tilt-left {
+  transform: rotate(-14deg);
+}
+
+.timeline-apple:hover {
+  transform: scale(1.06);
 }
 
 .timeline-footer {
-  margin-top: -50px;
+  margin-top: 60px;
+  text-align: center;
+  color: #f3e5b1;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* Modal */

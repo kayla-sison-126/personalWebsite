@@ -25,10 +25,10 @@ export default function Experience() {
     "2023 - Starting my Undergrad at University of Illinois Chicago"
     ,
     // 1
-    "2023 - Early Leadership for Art Collective"
+    "2023 - Leadership Committee for Art Collective"
     ,
     // 2
-    "2024 - Innovation Intern at OSF HealthCare"
+    "2024 - Product Design Intern at OSF HealthCare"
     ,
     // 3
     "2024 - Executive Board for Women in Computer Science"
@@ -47,6 +47,12 @@ export default function Experience() {
     ,
     // 8
     "2025 - WiCS Mentorship"
+    ,
+    // 9
+    "2026 - Software Engineering Intern at AbbVie"
+    ,
+    // 10
+    "2026 - UI/UX Designer for HackIllinois"
     ,
   ]
 
@@ -78,7 +84,21 @@ export default function Experience() {
     // 8
     "I became a mentor for Women in Computer Science in September 2025. I coach my mentee by providing resume reviews and career resources, as well as hosting mentorship meetings bi-weekly. Currently, I am coaching my mentee through a fullstack project alongside another mentor-mentee pairing. The project uses Django and React, and will ultimately be a gamified messaging website."
     ,
+    // 9
+    "In Summer 2026, I returned to AbbVie as a Software Engineering Intern on the enterprise design system team. I engineered a custom React diagramming component using Claude Code and the Figma MCP, bridging design and code so teams could dynamically and collaboratively render text-based diagrams. Leveraging AI-assisted workflows, I helped upgrade, test, and ship 7 core design system components, including dropdown filtering, dynamic color modes, and new component properties, directly impacting web and mobile interfaces used by 57,000+ employees. I also led a technical discovery evaluation for a Storybook MCP integration, synthesized feedback from 5+ user interviews on Dovetail into design system updates, and spearheaded an internal communication series to drive adoption of overlooked features."
+    ,
+    // 10
+    "Since July 2026, I've served on the HackIllinois committee as a UI/UX Designer, helping shape the experience for one of the Midwest's largest collegiate hackathons. I developed low-fidelity web and mobile registration interfaces in Figma, defining component layouts and user flows, and co-created a centralized design system with the team, establishing color tokens, typography, and component properties. I also analyzed survey feedback to map navigation paths and eliminate usability bottlenecks in our registration flow, working to make the event more accessible for future hackers."
+    ,
   ]
+
+  // pairs each title with its text and alternates which side of the
+  // trunk it branches off of
+  const experiences = titles.map((title, i) => ({
+    title,
+    text: text[i],
+    side: i % 2 === 0 ? "right" : "left",
+  }));
 
   // modal/pop-up
   const [modalOpen, setModalOpen] = useState(false);
@@ -102,7 +122,7 @@ export default function Experience() {
       <div className="parallax-container">
         <Parallax
           className="animation"
-          pages={5.2}
+          pages={5.7}
           style={{ top: "0", left: "0" }}
         >
           {/* Sky BG */}
@@ -171,162 +191,79 @@ export default function Experience() {
             <div className="animation_layer parallax">
               <div className={styles["intro-timeline-container"]}>
                 <div className={styles["intro-timeline"]}>
-                  <div className={styles["intro-timeline-left"]}>
-                    <h2>Click the apples on the path to read my story in detail!</h2>
-                    <div className={styles["myself"]}>
-                      <img src={myself1} />
-                    </div>
-                  </div>
+                  <h2 className={styles["intro-heading"]}>
+                    Click the apples on the timeline to discover my achievements! 
+                  </h2>
 
-                  <div className={styles["intro-timeline-right"]}>
-                    <h2>. . . or click on the sign to view my resume!</h2>
-                    <a
-                      // className="sign-button"
-                      href="resume_8_13_25.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={click2_play}
-                    >
-                      <img src={sign} />
-                    </a>
-                  </div>
+                  {/* <div className={styles["intro-character"]}>
+                    <img src={myself1} alt="Illustration of Kayla" />
+                  </div> */}
+
+                  {/* <span
+                    className={styles["intro-trunk-stub"]}
+                    aria-hidden="true"
+                  /> */}
+
+                  <a
+                    className={styles["resume-cta"]}
+                    href="resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={click2_play}
+                  >
+                    <img src={sign} alt="" />
+                    <span>. . . or click the sign to view my resume!</span>
+                  </a>
                 </div>
               </div>
             </div>
           </ParallaxLayer>
 
           {/* timeline section */}
-          <ParallaxLayer offset={1.6} speed={0.9}>
+          <ParallaxLayer offset={1.4} speed={0.9}>
             <div className="animation_layer parallax">
-              <div className={styles["snake-timeline-container"]}>
-                {/* Path SVG */}
-                <div className={styles["snake-path-container"]}>
-                  <svg
-                    className={styles["snake-path"]}
-                    viewBox="0 0 200 4000"
-                    preserveAspectRatio="xMidYMid meet"
-                    d="M100,0 ...rest of path..."
-                    stroke="#F3E5B1"
-                    fill="transparent"
-                    strokeWidth="160"
-                    strokeLinecap="round"
-                  >
-                    <path
-                      d="
-                        M140,0
-                        C150,140 50,200 100,300
-                        C150,400 50,500 100,600
-                        C150,700 50,800 100,900
-                        C150,1000 50,1100 100,1200
-                        C150,1300 50,1400 100,1500
-                        C150,1600 50,1700 100,1800
-                        C150,1900 50,2000 100,2100
-                        C150,2200 50,2300 100,2400
-                        C150,2500 50,2600 100,2700
-                        C150,2800 50,2900 100,3000
-                        C150,3100 50,3200 100,3300
-                        C150,3400 50,3500 100,3600
-                        C150,3700 50,3800 100,3900
-                        C150,4000 50,4100 100,4200
-                        C150,4300 50,4400 100,4500
-                        C150,4600 50,4700 100,4800
-                        C150,4900 50,5000 100,5100
-                      "
-                      stroke="#F3E5B1"
-                      fill="transparent"
-                      strokeWidth="160"
-                    />
-                  </svg>
-                </div>
-                {/* Timeline Events */}
-                <div className={styles["timeline-event-container"]}>
-                  <div className={styles["timeline-event-right"]}>
-                    <img
-                      src={apple}
-                      className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() => handleOpen(titles[0], text[0])}
-                    />
-                    <p>{titles[0]}</p>
-                  </div>
-                  <div className={styles["timeline-event-left"]}>
-                    <p>{titles[1]}</p>
-                    <img
-                      src={apple}
-                      className={styles["timeline-event"]}
-                      onClick={() =>
-                        handleOpen(titles[1], text[1])
-                      }
-                    />
-                  </div>
-                  <div className={styles["timeline-event-right"]}>
-                    <img
-                      src={apple}
-                      className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() =>
-                        handleOpen(titles[2], text[2])
-                      }
-                    />
-                    <p>{titles[2]}</p>
-                  </div>
-                  <div className={styles["timeline-event-left"]}>
-                    <p>{titles[3]}</p>
-                    <img
-                      src={apple}
-                      className={styles["timeline-event"]}
-                      onClick={() =>
-                        handleOpen(titles[3], text[3])
-                      }
-                    />
-                  </div>
-                  <div className={styles["timeline-event-right"]}>
-                    <img
-                      src={apple}
-                      className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() =>
-                        handleOpen(titles[4], text[4])
-                      }
-                    />
-                    <p>{titles[4]}</p>
-                  </div>
-                  <div className={styles["timeline-event-left"]}>
-                    <p>{titles[5]}</p>
-                    <img
-                      src={apple}
-                      className={styles["timeline-event"]}
-                      onClick={() =>
-                        handleOpen(titles[5], text[5])
-                      }
-                    />
-                  </div>
-                  <div className={styles["timeline-event-right"]}>
-                    <img
-                      src={apple}
-                      className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() =>
-                        handleOpen(titles[6], text[6])
-                      }
-                    />
-                    <p>{titles[6]}</p>
-                  </div>
-                  <div className={styles["timeline-event-left"]}>
-                    <p>{titles[7]}</p>
-                    <img
-                      src={apple}
-                      className={styles["timeline-event"]}
-                      onClick={() =>
-                        handleOpen(titles[7], text[7])
-                      }
-                    />
-                  </div>
-                  <div className={styles["timeline-event-right"]}>
-                    <img
-                      src={apple}
-                      className={styles[("timeline-event", "flip-apple")]}
-                      onClick={() =>
-                        handleOpen(titles[8], text[8])
-                      }
-                    />
-                    <p>{titles[8]}</p>
+              <div className={styles["timeline-section"]}>
+                <div className={styles["timeline-stack"]}>
+                  {/* Trunk that grows down the page; each apple below buds off of it */}
+                  <div className={styles["timeline-trunk"]} />
+
+                  {/* Timeline Events */}
+                  <div className={styles["timeline-rows"]}>
+                  {experiences.map((exp, i) => (
+                    <div
+                      key={i}
+                      className={`${styles["timeline-row"]} ${
+                        exp.side === "right"
+                          ? styles["row-right"]
+                          : styles["row-left"]
+                      }`}
+                    >
+                      <div className={styles["row-content"]}>
+                        {exp.side === "left" && (
+                          <p className={styles["timeline-text"]}>
+                            {exp.title}
+                          </p>
+                        )}
+                        <span className={styles["apple-wrap"]}>
+                          <img
+                            src={apple}
+                            alt=""
+                            className={`${styles["timeline-apple"]} ${
+                              exp.side === "right"
+                                ? styles["apple-tilt-right"]
+                                : styles["apple-tilt-left"]
+                            }`}
+                            onClick={() => handleOpen(exp.title, exp.text)}
+                          />
+                        </span>
+                        {exp.side === "right" && (
+                          <p className={styles["timeline-text"]}>
+                            {exp.title}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                   </div>
                 </div>
 
@@ -336,7 +273,7 @@ export default function Experience() {
           </ParallaxLayer>
 
           {/* Footer */}
-          <ParallaxLayer offset={4.9} speed={0.5} style={{ zIndex: 10 }}>
+          <ParallaxLayer offset={5} speed={0.5} style={{ zIndex: 10 }}>
             <div className="custom-footer">
               <div className="footer-wave">
                 <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
@@ -352,7 +289,7 @@ export default function Experience() {
                 <a href="https://github.com/kayla-sison-126">GitHub</a>
               </div>
               <br />
-              <p>© 2025 Kayla Sison</p>
+              <p>© Kayla Sison</p>
             </div>
           </ParallaxLayer>
         </Parallax>
